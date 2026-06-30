@@ -89,8 +89,8 @@
             .lang-btn { padding: 3px 5px; font-size: 11px; }
             .nav-right { gap: 2px; }
         }
-        .lang-bar-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
-        .lang-bar-wrap::-webkit-scrollbar { display: none; }
+        .scrollbar-none { -ms-overflow-style: none; scrollbar-width: none; }
+        .scrollbar-none::-webkit-scrollbar { display: none; }
         [data-i18n] { transition: opacity 0.15s ease; }
         .theme-toggle { cursor: pointer; padding: 6px; border-radius: 8px; transition: all 0.2s; color: #a8a29e; background: transparent; border: none; font-size: 16px; }
         .theme-toggle:hover { color: #fbbf24; background: rgba(217,119,6,0.1); }
@@ -438,16 +438,18 @@ function toggleTheme() {
                 <a href="#revenus" class="text-sm text-gray-400 hover:text-gold-300 transition-colors" data-i18n="nav_revenus">Revenus</a>
                 <a href="#faq" class="text-sm text-gray-400 hover:text-gold-300 transition-colors" data-i18n="nav_faq">FAQ</a>
             </div>
-            <div class="flex items-center space-x-2 nav-right">
+            <div class="flex items-center gap-1 sm:gap-2 shrink min-w-0">
                 <button onclick="toggleTheme()" class="theme-toggle shrink-0" title="Toggle theme">☀️</button>
-                <div class="lang-bar-wrap flex items-center space-x-1 border-r border-white/10 pr-2">
-                    <button data-lang="fr" onclick="setLang('fr')" class="lang-btn active">🇫🇷 FR</button>
-                    <button data-lang="en" onclick="setLang('en')" class="lang-btn">🇬🇧 EN</button>
-                    <button data-lang="sp" onclick="setLang('sp')" class="lang-btn">🇪🇸 ES</button>
-                    <button data-lang="ar" onclick="setLang('ar')" class="lang-btn">🇲🇦 AR</button>
+                <div class="flex items-center gap-2 sm:gap-3 overflow-x-auto -webkit-overflow-scrolling:touch scrollbar-none flex-nowrap max-w-[55vw] sm:max-w-none" style="scrollbar-width:none">
+                    <div class="flex items-center gap-1 sm:gap-2 shrink-0 border-r border-white/10 pr-2 sm:pr-3">
+                        <button data-lang="fr" onclick="setLang('fr')" class="lang-btn active shrink-0">🇫🇷 FR</button>
+                        <button data-lang="en" onclick="setLang('en')" class="lang-btn shrink-0">🇬🇧 EN</button>
+                        <button data-lang="sp" onclick="setLang('sp')" class="lang-btn shrink-0">🇪🇸 ES</button>
+                        <button data-lang="ar" onclick="setLang('ar')" class="lang-btn shrink-0">🇲🇦 AR</button>
+                    </div>
+                    <a href="https://ucfzem.github.io/ucfzem-blog/" target="_blank" class="hidden sm:inline-flex shrink-0 items-center px-3 py-1.5 text-sm font-medium text-gold-300 border border-gold-600/30 rounded-lg hover:bg-gold-600/10 transition-all" data-i18n="nav_blog">📝 Mon Blog</a>
+                    <a href="https://ucfzem.github.io/works" target="_blank" class="inline-flex shrink-0 items-center px-2 sm:px-3 py-1.5 text-xs sm:text-sm font-medium text-white cta-gradient rounded-lg hover:shadow-lg hover:shadow-gold-600/25 transition-all" data-i18n="nav_saas">🚀 SaaS</a>
                 </div>
-                <a href="https://ucfzem.github.io/ucfzem-blog/" target="_blank" class="hidden sm:inline-flex items-center px-3 py-1.5 text-sm font-medium text-gold-300 border border-gold-600/30 rounded-lg hover:bg-gold-600/10 transition-all" data-i18n="nav_blog">📝 Mon Blog</a>
-                <a href="https://ucfzem.github.io/works" target="_blank" class="inline-flex items-center px-2 sm:px-3 py-1.5 text-xs sm:text-sm font-medium text-white cta-gradient rounded-lg hover:shadow-lg hover:shadow-gold-600/25 transition-all shrink-0" data-i18n="nav_saas">🚀 SaaS</a>
             </div>
         </div>
     </div>
