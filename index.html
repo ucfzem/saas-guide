@@ -90,12 +90,29 @@
         .lang-btn { padding: 4px 8px; border-radius: 6px; font-size: 12px; font-weight: 600; cursor: pointer; transition: all 0.2s ease; background: transparent; border: 1px solid transparent; color: #a8a29e; white-space: nowrap; }
         .lang-btn:hover { color: #fbbf24; }
         .lang-btn.active { background: rgba(217,119,6,0.2); border-color: rgba(217,119,6,0.4); color: #fbbf24; }
-        @media (max-width: 480px) {
+        .nav-right { min-width: 0; flex-shrink: 1; }
+        .lang-bar-wrap {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            min-width: 0;
+            flex-shrink: 1;
+            max-width: 140px;
+        }
+        .lang-bar-wrap::-webkit-scrollbar { display: none; }
+        .glass-card, .glass-card *,
+        .saas-card, .saas-card * {
+            min-width: 0 !important;
+            max-width: 100% !important;
+            overflow-wrap: anywhere !important;
+            word-break: break-word !important;
+        }
+        @media (max-width: 420px) {
             .lang-btn { padding: 3px 5px; font-size: 11px; }
             .nav-right { gap: 2px; }
+            .lang-bar-wrap { max-width: 110px; }
+            a[data-i18n="nav_saas"] { padding-left: 6px !important; padding-right: 6px !important; }
         }
-        .scrollbar-none { -ms-overflow-style: none; scrollbar-width: none; }
-        .scrollbar-none::-webkit-scrollbar { display: none; }
         [data-i18n] { transition: opacity 0.15s ease; }
         .theme-toggle { cursor: pointer; padding: 6px; border-radius: 8px; transition: all 0.2s; color: #a8a29e; background: transparent; border: none; font-size: 16px; }
         .theme-toggle:hover { color: #fbbf24; background: rgba(217,119,6,0.1); }
@@ -445,7 +462,7 @@ function toggleTheme() {
             </div>
             <div class="flex items-center gap-1 sm:gap-2 shrink min-w-0">
                 <button onclick="toggleTheme()" class="theme-toggle shrink-0" title="Toggle theme">☀️</button>
-                <div class="flex items-center gap-2 sm:gap-3 overflow-x-auto -webkit-overflow-scrolling:touch scrollbar-none flex-nowrap max-w-[55vw] sm:max-w-none" style="scrollbar-width:none">
+                <div class="lang-bar-wrap flex items-center gap-2 sm:gap-3 flex-nowrap">
                     <div class="flex items-center gap-1 sm:gap-2 shrink-0 border-r border-white/10 pr-2 sm:pr-3">
                         <button data-lang="fr" onclick="setLang('fr')" class="lang-btn active shrink-0">🇫🇷 FR</button>
                         <button data-lang="en" onclick="setLang('en')" class="lang-btn shrink-0">🇬🇧 EN</button>
