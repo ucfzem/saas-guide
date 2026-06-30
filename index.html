@@ -41,8 +41,9 @@
     </script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body { font-family: 'Inter', sans-serif; background: #1a1412; color: #f5f0e6; overflow-x: hidden; }
+        html { scroll-behavior: smooth; overflow-x: hidden; max-width: 100vw; }
+        body { font-family: 'Inter', sans-serif; background: #1a1412; color: #f5f0e6; overflow-x: hidden; max-width: 100vw; }
+        p, [data-i18n], .text-content, h1, h2, h3, h4, h5, h6, span, div, li, a, pre, code { max-width: 100%; word-wrap: break-word; overflow-wrap: break-word; }
         .body-light { background: #fcf9f5; color: #4d3521; }
 
         /* Dark mode defaults */
@@ -81,9 +82,15 @@
         .blob-gold { background: rgba(217,119,6,0.5); }
         .blob-yellow { background: rgba(251,191,36,0.4); }
         .blob-brown { background: rgba(139,94,60,0.5); }
-        .lang-btn { padding: 4px 10px; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; transition: all 0.2s ease; background: transparent; border: 1px solid transparent; color: #a8a29e; }
+        .lang-btn { padding: 4px 8px; border-radius: 6px; font-size: 12px; font-weight: 600; cursor: pointer; transition: all 0.2s ease; background: transparent; border: 1px solid transparent; color: #a8a29e; white-space: nowrap; }
         .lang-btn:hover { color: #fbbf24; }
         .lang-btn.active { background: rgba(217,119,6,0.2); border-color: rgba(217,119,6,0.4); color: #fbbf24; }
+        @media (max-width: 480px) {
+            .lang-btn { padding: 3px 5px; font-size: 11px; }
+            .nav-right { gap: 2px; }
+        }
+        .lang-bar-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+        .lang-bar-wrap::-webkit-scrollbar { display: none; }
         [data-i18n] { transition: opacity 0.15s ease; }
         .theme-toggle { cursor: pointer; padding: 6px; border-radius: 8px; transition: all 0.2s; color: #a8a29e; background: transparent; border: none; font-size: 16px; }
         .theme-toggle:hover { color: #fbbf24; background: rgba(217,119,6,0.1); }
@@ -431,16 +438,16 @@ function toggleTheme() {
                 <a href="#revenus" class="text-sm text-gray-400 hover:text-gold-300 transition-colors" data-i18n="nav_revenus">Revenus</a>
                 <a href="#faq" class="text-sm text-gray-400 hover:text-gold-300 transition-colors" data-i18n="nav_faq">FAQ</a>
             </div>
-            <div class="flex items-center space-x-3">
-                <button onclick="toggleTheme()" class="theme-toggle" title="Toggle theme">☀️</button>
-                <div class="flex items-center space-x-1 border-r border-white/10 pr-3">
+            <div class="flex items-center space-x-2 nav-right">
+                <button onclick="toggleTheme()" class="theme-toggle shrink-0" title="Toggle theme">☀️</button>
+                <div class="lang-bar-wrap flex items-center space-x-1 border-r border-white/10 pr-2">
                     <button data-lang="fr" onclick="setLang('fr')" class="lang-btn active">🇫🇷 FR</button>
                     <button data-lang="en" onclick="setLang('en')" class="lang-btn">🇬🇧 EN</button>
                     <button data-lang="sp" onclick="setLang('sp')" class="lang-btn">🇪🇸 ES</button>
                     <button data-lang="ar" onclick="setLang('ar')" class="lang-btn">🇲🇦 AR</button>
                 </div>
                 <a href="https://ucfzem.github.io/ucfzem-blog/" target="_blank" class="hidden sm:inline-flex items-center px-3 py-1.5 text-sm font-medium text-gold-300 border border-gold-600/30 rounded-lg hover:bg-gold-600/10 transition-all" data-i18n="nav_blog">📝 Mon Blog</a>
-                <a href="https://ucfzem.github.io/works" target="_blank" class="inline-flex items-center px-3 py-1.5 text-sm font-medium text-white cta-gradient rounded-lg hover:shadow-lg hover:shadow-gold-600/25 transition-all" data-i18n="nav_saas">🚀 Mes SaaS</a>
+                <a href="https://ucfzem.github.io/works" target="_blank" class="inline-flex items-center px-2 sm:px-3 py-1.5 text-xs sm:text-sm font-medium text-white cta-gradient rounded-lg hover:shadow-lg hover:shadow-gold-600/25 transition-all shrink-0" data-i18n="nav_saas">🚀 SaaS</a>
             </div>
         </div>
     </div>
