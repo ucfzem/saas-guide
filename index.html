@@ -44,6 +44,11 @@
         html { scroll-behavior: smooth; overflow-x: hidden; max-width: 100vw; }
         body { font-family: 'Inter', sans-serif; background: #1a1412; color: #f5f0e6; overflow-x: hidden; max-width: 100vw; }
         p, [data-i18n], .text-content, h1, h2, h3, h4, h5, h6, span, div, li, a, pre, code { max-width: 100%; word-wrap: break-word; overflow-wrap: break-word; }
+        .glass-card, .saas-card, .code-block { min-width: 0; width: 100%; max-width: 100%; }
+        .glass-card p, .saas-card p, .glass-card span, .saas-card span, .glass-card div, .saas-card div, .glass-card h1, .glass-card h2, .glass-card h3, .glass-card h4 { white-space: normal; word-break: break-word; }
+        .flex, .inline-flex, .grid { min-width: 0; }
+        .flex-1, .flex-auto, .shrink { min-width: 0; }
+        [class*="space-x-"] { min-width: 0; }
         .body-light { background: #fcf9f5; color: #4d3521; }
 
         /* Dark mode defaults */
