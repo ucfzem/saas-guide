@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="title">SaaS Guide — Guide Complet pour Lancer votre SaaS 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        brown: {
+                            50: '#fef9f7', 100: '#fef2e8', 200: '#ffedd5', 300: '#fed7aa', 400: '#fdba74',
+                            500: '#fb923c', 600: '#f97316', 700: '#ea580c', 800: '#c2410c', 900: '#9a3412',
+                        },
+                        gold: {
+                            50: '#fffbeb', 100: '#fef3c7', 200: '#fde68a', 300: '#fcd34d', 400: '#fbbf24',
+                            500: '#f59e0b', 600: '#d97706', 700: '#b45309', 800: '#92400e', 900: '#78350f',
+                        },
+                        yellow: {
+                            50: '#fefce8', 100: '#fef9c3', 200: '#fef08a', 300: '#fde047', 400: '#facc15',
+                            500: '#eab308', 600: '#ca8a04', 700: '#a16207', 800: '#854d0e', 900: '#713f12',
+                        },
+                        beige: {
+                            50: '#fafaf9', 100: '#f5f5f4', 200: '#e7e5e4', 300: '#d6d3d1', 400: '#a8a29e',
+                            500: '#78716c', 600: '#57534e', 700: '#44403c', 800: '#292524', 900: '#1c1917',
+                        },
+                        dark: {
+                            900: '#1c1917', 800: '#292524', 700: '#44403c', 600: '#57534e', 500: '#78716c',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background: #1c1917; color: #e2e8f0; overflow-x: hidden; }
+        .body-light { background: #fef9f3; color: #1c1917; }
+        .gradient-text { background: linear-gradient(135deg, #d97706 0%, #f59e0b 50%, #fbbf24 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .gradient-text-gold { background: linear-gradient(135deg, #b45309 0%, #d97706 50%, #f59e0b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .hero-gradient { background: radial-gradient(ellipse at 20% 50%, rgba(217,119,6,0.15) 0%, transparent 50%), radial-gradient(ellipse at 80% 50%, rgba(245,158,11,0.12) 0%, transparent 50%), radial-gradient(ellipse at 50% 0%, rgba(251,191,36,0.08) 0%, transparent 50%); }
+        .glass-card { background: rgba(68,64,60,0.6); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.06); }
+        .glass-card:hover { border-color: rgba(217,119,6,0.3); box-shadow: 0 0 40px rgba(217,119,6,0.1); }
+        .glow-line { height: 1px; background: linear-gradient(90deg, transparent,rgba(217,119,6,0.5),transparent); }
+        .step-number { background: linear-gradient(135deg, #b45309, #d97706); box-shadow: 0 0 20px rgba(217,119,6,0.4); }
+        .pulse-glow { animation: pulseGlow 3s ease-in-out infinite; }
+        @keyframes pulseGlow { 0%,100% { box-shadow: 0 0 20px rgba(217,119,6,0.2); } 50% { box-shadow: 0 0 40px rgba(217,119,6,0.4); } }
+        .slide-in { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.16,1,0.3,1); }
+        .slide-in.visible { opacity: 1; transform: translateY(0); }
+        .timeline-line { background: linear-gradient(180deg, #d97706, #f59e0b, #fbbf24); }
+        .code-block { background: #292524; border: 1px solid rgba(255,255,255,0.08); font-family: 'JetBrains Mono', monospace; }
+        .metric-bar { background: linear-gradient(90deg, #b45309, #d97706); transition: width 1.5s cubic-bezier(0.16,1,0.3,1); }
+        .nav-blur { backdrop-filter: blur(20px); background: rgba(28,25,23,0.8); }
+        .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.5s cubic-bezier(0.16,1,0.3,1); }
+        .accordion-content.open { max-height: 500px; }
+        .hover-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .hover-lift:hover { transform: translateY(-8px); box-shadow: 0 20px 60px rgba(0,0,0,0.4); }
+        .tag { background: rgba(217,119,6,0.15); border: 1px solid rgba(217,119,6,0.3); transition: all 0.3s ease; }
+        .tag:hover { background: rgba(217,119,6,0.25); border-color: rgba(217,119,6,0.5); }
+        .saas-card { background: linear-gradient(135deg, rgba(68,64,60,0.8), rgba(41,37,36,0.8)); border: 1px solid rgba(255,255,255,0.06); transition: all 0.4s ease; }
+        .saas-card:hover { border-color: rgba(217,119,6,0.4); transform: translateY(-4px) scale(1.02); }
+        .cta-gradient { background: linear-gradient(135deg, #b45309 0%, #d97706 100%); }
+        .cta-gradient:hover { background: linear-gradient(135deg, #d97706 0%, #f59e0b 100%); }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #1c1917; }
+        ::-webkit-scrollbar-thumb { background: #57534e; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #d97706; }
+        .blob { border-radius: 50%; filter: blur(80px); opacity: 0.15; animation: blobMove 20s ease-in-out infinite alternate; }
+        @keyframes blobMove { 0% { transform: translate(0,0) scale(1); } 33% { transform: translate(30px,-50px) scale(1.1); } 66% { transform: translate(-20px,20px) scale(0.9); } 100% { transform: translate(0,0) scale(1); } }
+        .lang-btn { padding: 4px 10px; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; transition: all 0.2s ease; background: transparent; border: 1px solid transparent; color: #a8a29e; }
+        .lang-btn:hover { color: #fbbf24; }
+        .lang-btn.active { background: rgba(217,119,6,0.2); border-color: rgba(217,119,6,0.4); color: #fbbf24; }
+        [data-i18n] { transition: opacity 0.15s ease; }
+        .body-light .lang-btn { color: #78716c; }
+        .body-light .lang-btn:hover { color: #b45309; }
+        .body-light .lang-btn.active { background: rgba(180,83,9,0.1); border-color: rgba(180,83,9,0.3); color: #b45309; }
+        .body-light .glass-card { background: rgba(248,240,230,0.8); border-color: rgba(180,83,9,0.1); }
+        .body-light .glass-card:hover { border-color: rgba(180,83,9,0.3); }
+        .body-light .nav-blur { background: rgba(254,249,243,0.9); }
+        .body-light .saas-card { background: linear-gradient(135deg, rgba(248,240,230,0.9), rgba(242,232,205,0.9)); border-color: rgba(180,83,9,0.1); }
+        .body-light .saas-card:hover { border-color: rgba(180,83,9,0.3); }
+        .body-light .code-block { background: #f5f5f4; border-color: rgba(180,83,9,0.1); }
+        .body-light .code-block pre { color: #292524; }
+        .body-light .tag { background: rgba(180,83,9,0.1); border-color: rgba(180,83,9,0.2); }
+        .body-light .tag:hover { background: rgba(180,83,9,0.15); }
+        .body-light .hero-gradient { background: radial-gradient(ellipse at 20% 50%, rgba(217,119,6,0.08) 0%, transparent 50%), radial-gradient(ellipse at 80% 50%, rgba(245,158,11,0.06) 0%, transparent 50%); }
+        .theme-toggle { cursor: pointer; padding: 6px; border-radius: 8px; transition: all 0.2s; color: #a8a29e; background: transparent; border: none; font-size: 16px; }
+        .theme-toggle:hover { color: #fbbf24; background: rgba(217,119,6,0.1); }
+    </style>
+</head>
+<body>
+
+<script>
+const translations = {
+    fr: {
+        title: "SaaS Guide — Guide Complet pour Lancer votre SaaS 2025",
+        nav_guide: "Guide",
+        nav_etapes: "Étapes", nav_stack: "Stack Tech", nav_revenus: "Revenus", nav_faq: "FAQ",
+        nav_blog: "📝 Mon Blog", nav_saas: "🚀 Mes SaaS",
+        hero_badge: "Guide complet mis à jour pour 2025",
+        hero_title_1: "Comment Débuter un", hero_title_2: "Business SaaS", hero_title_3: "en Ligne",
+        hero_sub: "De l'idée à vos premiers utilisateurs payants. Le guide technique et stratégique pour lancer votre propre produit SaaS — même avec 0 budget.",
+        hero_cta: "Commencer le Guide", hero_cta2: "Voir mes projets SaaS →",
+        stat_1_label: "Marché SaaS 2025", stat_2_label: "SaaS existants", stat_3_label: "Marge brute moy.", stat_4_label: "Pour se lancer",
+        toc_title: "📋 Sommaire du Guide", toc_sub: "Un parcours complet en 10 étapes pour passer de l'idée au premier revenu récurrent.",
+        toc_1: "Trouver votre idée SaaS", toc_1_sub: "Identifier un problème réel et viable",
+        toc_2: "Valider le marché", toc_2_sub: "Recherche, interviews, preuve de concept",
+        toc_3: "Construire le MVP", toc_3_sub: "Choisir la stack tech, développer l'essentiel",
+        toc_4: "Monétiser & Pricing", toc_4_sub: "Modèles de revenus, stratégie de tarification",
+        toc_5: "Acquisition & Growth", toc_5_sub: "Marketing, SEO, content, social proof",
+        etape1_badge: "ÉTAPE 1", etape1_title: "Trouver Votre Idée SaaS",
+        etape1_card1_title: "Résoudre un problème réel", etape1_card1_text: "Les meilleurs SaaS résolvent un problème douloureux que les gens paieraient volontiers pour éliminer. Commencez par observer les processus inefficaces dans votre industrie ou votre quotidien.",
+        etape1_card1_tip: "Listez 10 frustrations récurrentes dans votre travail. Chacune pourrait être un SaaS.",
+        etape1_card2_title: "Analyser la concurrence", etape1_card2_text: "Si un outil concurrent existe, c'est bon signe — il y a un marché payant. Votre différenciation peut être : meilleur UX, prix plus bas, niche spécifique, ou technologie supérieure.",
+        etape1_card3_title: "Sources d'inspiration",
+        etape2_badge: "ÉTAPE 2", etape2_title: "Valider le Marché",
+        etape2_card1_title: "Interviews Utilisateurs", etape2_card1_text: "Parlez à au moins 20 personnes cibles. Ne vendez pas — écoutez.", etape2_card1_tag: "15-30 min / entretien",
+        etape2_card2_title: "Landing Page Test", etape2_card2_text: "Créez une page de vente avant même de coder. Mesurez l'intérêt via les inscriptions email.", etape2_card2_tag: "Outils: Carrd, Framer",
+        etape2_card3_title: "Pré-vente / Waitlist", etape2_card3_text: "Si 10+ personnes paient d'avance ou rejoignent votre waitlist, vous avez une validation solide.", etape2_card3_tag: "Cible: 50+ inscrits",
+        etape2_checklist_title: "Checklist de Validation",
+        etape2_check_1: "Problem interviewé 20+ personnes", etape2_check_2: "Compétition identifiée et analysée",
+        etape2_check_3: "Landing page avec waitlist live", etape2_check_4: "50+ emails collectés",
+        etape2_check_5: "Premiers paiements reçus", etape2_check_6: "Prix testé et validé",
+        etape3_badge: "ÉTAPE 3", etape3_title: "Construire le MVP",
+        etape3_sub: "Le Minimum Viable Product est la version la plus simple de votre produit qui résout le problème principal. Construisez en 4-8 semaines maximum.",
+        etape3_stack_title: "Stack Technique Recommandée", etape3_timeline_title: "Timeline de Construction",
+        etape3_tl_1_title: "Architecture & Setup", etape3_tl_1_sub: "Repo, CI/CD, database schema, auth flow, design system",
+        etape3_tl_2_title: "Core Features", etape3_tl_2_sub: "Fonctionnalité principale, UX, dashboard, CRUD",
+        etape3_tl_3_title: "Paiement & Billing", etape3_tl_3_sub: "Stripe integration, plans, webhooks, invoices",
+        etape3_tl_4_title: "Launch", etape3_tl_4_sub: "Testing, bug fixes, landing page, Product Hunt, marketing",
+        etape4_badge: "ÉTAPE 4", etape4_title: "Monétiser & Pricing",
+        etape4_card1_title: "Modèles de Revenus Courants", etape4_card2_title: "Exemple de Pricing",
+        etape4_simulator_title: "Simulateur de Revenus MRR", etape4_simulator_sub: "Calculez votre Monthly Recurring Revenue potentiel",
+        etape4_users_label: "Utilisateurs payants", etape4_price_label: "Prix moyen / mois ($)", etape4_mrr_label: "MRR Estimé",
+        etape5_badge: "ÉTAPE 5", etape5_title: "Acquisition & Growth Hacking",
+        etape5_card1_title: "Canaux d'Acquisition", etape5_card2_title: "Métriques Clés SaaS",
+        etape5_bip_title: "Build in Public — Votre Arme Secrète", etape5_bip_text: "Le Build in Public consiste à partager ouvertement votre processus de création.",
+        revenus_title: "Objectifs de Revenus", revenus_sub: "Roadmap réaliste pour passer de $0 à $10,000 MRR en tant que solopreneur.",
+        faq_title: "Questions Fréquentes", faq_sub: "Les questions les plus posées par les futurs fondateurs SaaS.",
+        faq_1_q: "Faut-il être un développeur pour lancer un SaaS ?", faq_1_a: "Non, mais ça aide énormément. En tant que développeur, vous pouvez construire vous-même — ce qui réduit vos coûts à quasi-zéro.",
+        faq_2_q: "Combien ça coûte de lancer un SaaS ?", faq_2_a: "Avec la stack moderne : $0-50/mois. Vercel (gratuit tier), Supabase (gratuit tier), Stripe (pas de frais fixes), domain ($12/an).",
+        faq_3_q: "Combien de temps avant de gagner de l'argent ?", faq_3_a: "Si vous validez avant de construire, vous pouvez avoir des premiers paiements en 2-3 mois. Le MVP prend 4-8 semaines.",
+        faq_4_q: "Le marché SaaS n'est-il pas saturé ?", faq_4_a: "Le marché est grand et en croissance. Il y a de la place pour des SaaS de niche, avec une UX supérieure, ou un positionnement unique.",
+        faq_5_q: "Comment gérer un SaaS en parallèle de mon travail ?", faq_5_a: "Bloquez 2h/jour ou 10h/semaine. Automatisez au maximum. Les week-ends sont pour les lancements.",
+        cta_title_1: "Prêt à Lancer Votre", cta_title_2: "SaaS", cta_title_3: "?",
+        cta_sub: "Le meilleur moment pour commencer, c'est maintenant. Consultez mon blog pour plus de guides et découvrez mes projets.",
+        cta_btn1: "📝 Lire mon Blog Technique", cta_btn2: "🚀 Voir Mes Projets SaaS",
+        footer_desc: "Guide complet pour les développeurs qui veulent lancer leur propre produit SaaS en ligne.",
+        footer_ressources: "Ressources", footer_blog: "Blog Technique", footer_portfolio: "Portfolio SaaS", footer_guide: "Guide Complet", footer_outils: "Outils Recommandés",
+        footer_made: "Made by",
+    },
+    en: {
+        title: "SaaS Guide — Complete Guide to Launch Your SaaS 2025",
+        nav_guide: "Guide", nav_etapes: "Steps", nav_stack: "Tech Stack", nav_revenus: "Revenue", nav_faq: "FAQ",
+        nav_blog: "📝 My Blog", nav_saas: "🚀 My SaaS",
+        hero_badge: "Complete guide updated for 2025",
+        hero_title_1: "How to Start a", hero_title_2: "SaaS Business", hero_title_3: "Online",
+        hero_sub: "From idea to your first paying users. The technical and strategic guide to launch your own SaaS product — even with $0 budget.",
+        hero_cta: "Start the Guide", hero_cta2: "View my SaaS projects →",
+        stat_1_label: "SaaS Market 2025", stat_2_label: "Existing SaaS", stat_3_label: "Avg. Gross Margin", stat_4_label: "To Launch",
+        toc_title: "📋 Table of Contents", toc_sub: "A complete 10-step journey from idea to first recurring revenue.",
+        toc_1: "Find Your SaaS Idea", toc_1_sub: "Identify a real, viable problem",
+        toc_2: "Validate the Market", toc_2_sub: "Research, interviews, proof of concept",
+        toc_3: "Build the MVP", toc_3_sub: "Choose your tech stack, build the essentials",
+        toc_4: "Monetize & Pricing", toc_4_sub: "Revenue models, pricing strategy",
+        toc_5: "Acquisition & Growth", toc_5_sub: "Marketing, SEO, content, social proof",
+        etape1_badge: "STEP 1", etape1_title: "Find Your SaaS Idea",
+        etape1_card1_title: "Solve a Real Problem", etape1_card1_text: "The best SaaS solve a painful problem people would gladly pay to eliminate. Start by observing inefficient processes in your industry or daily life.",
+        etape1_card1_tip: "List 10 recurring frustrations in your work. Each one could be a SaaS.",
+        etape1_card2_title: "Analyze Competition", etape1_card2_text: "If a competitor exists, that's a good sign — there's a paying market.",
+        etape1_card3_title: "Inspiration Sources",
+        etape2_badge: "STEP 2", etape2_title: "Validate the Market",
+        etape2_card1_title: "User Interviews", etape2_card1_text: "Talk to at least 20 target people. Don't sell — listen.", etape2_card1_tag: "15-30 min / interview",
+        etape2_card2_title: "Landing Page Test", etape2_card2_text: "Create a sales page before coding. Measure interest via email signups.", etape2_card2_tag: "Tools: Carrd, Framer",
+        etape2_card3_title: "Pre-sales / Waitlist", etape2_card3_text: "If 10+ people pay upfront or join your waitlist, you have solid validation.", etape2_card3_tag: "Target: 50+ signups",
+        etape2_checklist_title: "Validation Checklist",
+        etape2_check_1: "Interviewed 20+ people with the problem", etape2_check_2: "Competition identified and analyzed",
+        etape2_check_3: "Landing page with live waitlist", etape2_check_4: "50+ emails collected",
+        etape2_check_5: "First payments received", etape2_check_6: "Price tested and validated",
+        etape3_badge: "STEP 3", etape3_title: "Build the MVP",
+        etape3_sub: "The Minimum Viable Product is the simplest version of your product that solves the core problem. Build in 4-8 weeks maximum.",
+        etape3_stack_title: "Recommended Tech Stack", etape3_timeline_title: "Build Timeline",
+        etape3_tl_1_title: "Architecture & Setup", etape3_tl_1_sub: "Repo, CI/CD, database schema, auth flow, design system",
+        etape3_tl_2_title: "Core Features", etape3_tl_2_sub: "Main feature, UX, dashboard, CRUD",
+        etape3_tl_3_title: "Payment & Billing", etape3_tl_3_sub: "Stripe integration, plans, webhooks, invoices",
+        etape3_tl_4_title: "Launch", etape3_tl_4_sub: "Testing, bug fixes, landing page, Product Hunt, marketing",
+        etape4_badge: "STEP 4", etape4_title: "Monetize & Pricing",
+        etape4_card1_title: "Revenue Models", etape4_card2_title: "Pricing Example",
+        etape4_simulator_title: "MRR Revenue Simulator", etape4_simulator_sub: "Calculate your potential Monthly Recurring Revenue",
+        etape4_users_label: "Paying users", etape4_price_label: "Average price / month ($)", etape4_mrr_label: "Estimated MRR",
+        etape5_badge: "STEP 5", etape5_title: "Acquisition & Growth Hacking",
+        etape5_card1_title: "Acquisition Channels", etape5_card2_title: "Key SaaS Metrics",
+        etape5_bip_title: "Build in Public — Your Secret Weapon", etape5_bip_text: "Build in Public means openly sharing your creation process.",
+        revenus_title: "Revenue Goals", revenus_sub: "Realistic roadmap from $0 to $10,000 MRR as a solopreneur.",
+        faq_title: "Frequently Asked Questions", faq_sub: "The most common questions from aspiring SaaS founders.",
+        faq_1_q: "Do you need to be a developer to launch a SaaS?", faq_1_a: "No, but it helps enormously. As a developer, you can build yourself. Otherwise, use no-code tools or find a technical co-founder.",
+        faq_2_q: "How much does it cost to launch a SaaS?", faq_2_a: "With the modern stack: $0-50/month. Vercel (free tier), Supabase (free tier), Stripe (no fixed fees), domain ($12/year).",
+        faq_3_q: "How long until you make money?", faq_3_a: "If you validate before building, you can get first payments in 2-3 months. MVP takes 4-8 weeks.",
+        faq_4_q: "Isn't the SaaS market saturated?", faq_4_a: "The market is large and growing. There's room for niche SaaS with superior UX or unique positioning.",
+        faq_5_q: "How to run a SaaS alongside my day job?", faq_5_a: "Block 2h/day or 10h/week. Automate as much as possible. Weekends are for launches.",
+        cta_title_1: "Ready to Launch Your", cta_title_2: "SaaS", cta_title_3: "?",
+        cta_sub: "The best time to start is now. Check my blog for more technical guides.",
+        cta_btn1: "📝 Read My Tech Blog", cta_btn2: "🚀 View My SaaS Projects",
+        footer_desc: "Complete guide for developers who want to launch their own SaaS product online.",
+        footer_ressources: "Resources", footer_blog: "Tech Blog", footer_portfolio: "SaaS Portfolio", footer_guide: "Complete Guide", footer_outils: "Recommended Tools",
+        footer_made: "Made by",
+    },
+    sp: {
+        title: "SaaS Guide — Guía Completa para Lanzar tu SaaS 2025",
+        nav_guide: "Guía", nav_etapes: "Pasos", nav_stack: "Stack Tech", nav_revenus: "Ingresos", nav_faq: "FAQ",
+        nav_blog: "📝 Mi Blog", nav_saas: "🚀 Mis SaaS",
+        hero_badge: "Guía completa actualizada para 2025",
+        hero_title_1: "Cómo Empezar un", hero_title_2: "Negocio SaaS", hero_title_3: "en Línea",
+        hero_sub: "De la idea a tus primeros usuarios de pago. La guía técnica y estratégica para lanzar tu propio producto SaaS — incluso con presupuesto 0.",
+        hero_cta: "Empezar la Guía", hero_cta2: "Ver mis proyectos SaaS →",
+        stat_1_label: "Mercado SaaS 2025", stat_2_label: "SaaS existentes", stat_3_label: "Margen bruto prom.", stat_4_label: "Para lanzar",
+        toc_title: "📋 Tabla de Contenidos", toc_sub: "Un recorrido completo en 10 pasos desde la idea hasta el primer ingreso recurrente.",
+        toc_1: "Encuentra tu idea SaaS", toc_1_sub: "Identifica un problema real y viable",
+        toc_2: "Valida el mercado", toc_2_sub: "Investigación, entrevistas, prueba de concepto",
+        toc_3: "Construye el MVP", toc_3_sub: "Elige tu stack tech, desarrolla lo esencial",
+        toc_4: "Monetiza & Precios", toc_4_sub: "Modelos de ingresos, estrategia de precios",
+        toc_5: "Adquisición & Growth", toc_5_sub: "Marketing, SEO, contenido, prueba social",
+        etape1_badge: "PASO 1", etape1_title: "Encuentra tu Idea SaaS",
+        etape1_card1_title: "Resuelve un Problema Real", etape1_card1_text: "Los mejores SaaS resuelven un problema doloroso que la gente pagaría por eliminar.",
+        etape1_card1_tip: "Lista 10 frustraciones recurrentes en tu trabajo. Cada una podría ser un SaaS.",
+        etape1_card2_title: "Analiza la Competencia", etape1_card2_text: "Si existe un competidor, es buena señal — hay un mercado de pago.",
+        etape1_card3_title: "Fuentes de Inspiración",
+        etape2_badge: "PASO 2", etape2_title: "Valida el Mercado",
+        etape2_card1_title: "Entrevistas a Usuarios", etape2_card1_text: "Habla con al menos 20 personas objetivo. No vendas — escucha.", etape2_card1_tag: "15-30 min / entrevista",
+        etape2_card2_title: "Prueba de Landing Page", etape2_card2_text: "Crea una página de ventas antes de programar.", etape2_card2_tag: "Herramientas: Carrd, Framer",
+        etape2_card3_title: "Pre-venta / Waitlist", etape2_card3_text: "Si 10+ personas pagan por adelantado o se unen a tu waitlist, tienes una validación sólida.", etape2_card3_tag: "Objetivo: 50+ inscritos",
+        etape2_checklist_title: "Lista de Validación",
+        etape2_check_1: "Entrevistadas 20+ personas con el problema", etape2_check_2: "Competencia identificada y analizada",
+        etape2_check_3: "Landing page con waitlist activa", etape2_check_4: "50+ emails recolectados",
+        etape2_check_5: "Primeros pagos recibidos", etape2_check_6: "Precio probado y validado",
+        etape3_badge: "PASO 3", etape3_title: "Construye el MVP",
+        etape3_sub: "El Producto Mínimo Viable es la versión más simple que resuelve el problema principal. Construye en 4-8 semanas máximo.",
+        etape3_stack_title: "Stack Técnico Recomendado", etape3_timeline_title: "Cronograma de Construcción",
+        etape3_tl_1_title: "Arquitectura & Setup", etape3_tl_1_sub: "Repo, CI/CD, esquema DB, flujo auth, sistema de diseño",
+        etape3_tl_2_title: "Funcionalidades Clave", etape3_tl_2_sub: "Función principal, UX, dashboard, CRUD",
+        etape3_tl_3_title: "Pagos & Facturación", etape3_tl_3_sub: "Integración Stripe, planes, webhooks, facturas",
+        etape3_tl_4_title: "Lanzamiento", etape3_tl_4_sub: "Testing, correcciones, landing page, Product Hunt, marketing",
+        etape4_badge: "PASO 4", etape4_title: "Monetiza & Precios",
+        etape4_card1_title: "Modelos de Ingresos", etape4_card2_title: "Ejemplo de Precios",
+        etape4_simulator_title: "Simulador de Ingresos MRR", etape4_simulator_sub: "Calcula tu potencial Ingreso Recurrente Mensual",
+        etape4_users_label: "Usuarios de pago", etape4_price_label: "Precio promedio / mes ($)", etape4_mrr_label: "MRR Estimado",
+        etape5_badge: "PASO 5", etape5_title: "Adquisición & Growth Hacking",
+        etape5_card1_title: "Canales de Adquisición", etape5_card2_title: "Métricas Clave SaaS",
+        etape5_bip_title: "Build in Public — Tu Arma Secreta", etape5_bip_text: "Build in Public significa compartir abiertamente tu proceso de creación.",
+        revenus_title: "Objetivos de Ingresos", revenus_sub: "Hoja de ruta realista de $0 a $10,000 MRR como solopreneur.",
+        faq_title: "Preguntas Frecuentes", faq_sub: "Las preguntas más comunes de futuros fundadores SaaS.",
+        faq_1_q: "¿Necesitas ser desarrollador para lanzar un SaaS?", faq_1_a: "No, pero ayuda enormemente. Como desarrollador, puedes construir tú mismo.",
+        faq_2_q: "¿Cuánto cuesta lanzar un SaaS?", faq_2_a: "Con el stack moderno: $0-50/mes. Vercel (gratis), Supabase (gratis), Stripe (sin cuotas fijas), dominio ($12/año).",
+        faq_3_q: "¿Cuánto tiempo hasta ganar dinero?", faq_3_a: "Si validas antes de construir, puedes tener primeros pagos en 2-3 meses. El MVP toma 4-8 semanas.",
+        faq_4_q: "¿El mercado SaaS no está saturado?", faq_4_a: "El mercado es grande y crece. Hay espacio para SaaS de nicho con UX superior o posicionamiento único.",
+        faq_5_q: "¿Cómo gestionar un SaaS junto a mi trabajo?", faq_5_a: "Bloquea 2h/día o 10h/semana. Automatiza al máximo. Los fines de semana son para lanzamientos.",
+        cta_title_1: "¿Listo para Lanzar tu", cta_title_2: "SaaS", cta_title_3: "?",
+        cta_sub: "El mejor momento para empezar es ahora. Revisa mi blog para más guías.",
+        cta_btn1: "📝 Leer mi Blog Técnico", cta_btn2: "🚀 Ver Mis Proyectos SaaS",
+        footer_desc: "Guía completa para desarrolladores que quieren lanzar su propio producto SaaS en línea.",
+        footer_ressources: "Recursos", footer_blog: "Blog Técnico", footer_portfolio: "Portafolio SaaS", footer_guide: "Guía Completa", footer_outils: "Herramientas Recomendadas",
+        footer_made: "Hecho por",
+    },
+    ar: {
+        title: "SaaS Guide — الدليل الكامل لإطلاق منتج SaaS 2025",
+        nav_guide: "الدليل", nav_etapes: "الخطوات", nav_stack: "التقنيات", nav_revenus: "الإيرادات", nav_faq: "الأسئلة",
+        nav_blog: "📝 مدونتي", nav_saas: "🚀 مشاريعي",
+        hero_badge: "دليل كامل محدث لسنة 2025",
+        hero_title_1: "كيف تبدأ", hero_title_2: "مشروع SaaS", hero_title_3: "عبر الإنترنت",
+        hero_sub: "من الفكرة إلى أول المستخدمين الذين يدفعون. الدليل التقني والاستراتيجي لإطلاق منتج SaaS الخاص بك — حتى بميزانية صفر.",
+        hero_cta: "ابدأ الدليل", hero_cta2: "عرض مشاريعي SaaS ←",
+        stat_1_label: "سوق SaaS 2025", stat_2_label: "SaaS موجود", stat_3_label: "متوسط هامش الربح", stat_4_label: "للإطلاق",
+        toc_title: "📋 فهرس المحتويات", toc_sub: "رحلة كاملة من 10 خطوات من الفكرة إلى أول إيراد متكرر.",
+        toc_1: "ابحث عن فكرة SaaS", toc_1_sub: "حدد مشكلة حقيقية وقابلة للتطبيق",
+        toc_2: "تحقق من السوق", toc_2_sub: "بحث، مقابلات، إثبات المفهوم",
+        toc_3: "بناء المنتج الأولي", toc_3_sub: "اختر التقنيات، طور الأساسيات",
+        toc_4: "الربح والتسعير", toc_4_sub: "نماذج الإيرادات، استراتيجية التسعير",
+        toc_5: "الاكتساب والنمو", toc_5_sub: "تسويق، SEO، محتوى، دليل اجتماعي",
+        etape1_badge: "الخطوة 1", etape1_title: "ابحث عن فكرة SaaS",
+        etape1_card1_title: "حل مشكلة حقيقية", etape1_card1_text: "أفضل منتجات SaaS تحل مشكلة مؤلمة يدفع الناس عن طيب خاطر للتخلص منها.",
+        etape1_card1_tip: "اكتب 10 إحباطات متكررة في عملك. كل واحدة يمكن أن تكون SaaS.",
+        etape1_card2_title: "تحليل المنافسة", etape1_card2_text: "إذا كان هناك منافس، فهذه علامة جيدة — هناك سوق يدفع.",
+        etape1_card3_title: "مصادر الإلهام",
+        etape2_badge: "الخطوة 2", etape2_title: "تحقق من السوق",
+        etape2_card1_title: "مقابلات المستخدمين", etape2_card1_text: "تحدث إلى 20 شخصًا على الأقل من الجمهور المستهدف.", etape2_card1_tag: "15-30 دقيقة / مقابلة",
+        etape2_card2_title: "اختبار الصفحة المقصودة", etape2_card2_text: "أنشئ صفحة مبيعات قبل البرمجة.", etape2_card2_tag: "أدوات: Carrd, Framer",
+        etape2_card3_title: "البيع المسبق / قائمة الانتظار", etape2_card3_text: "إذا دفع 10+ أشخاص مقدمًا أو انضموا إلى قائمة الانتظار، فهذا تحقق قوي.", etape2_card3_tag: "الهدف: 50+ مشترك",
+        etape2_checklist_title: "قائمة التحقق",
+        etape2_check_1: "مقابلة 20+ شخصًا يعانون من المشكلة", etape2_check_2: "المنافسة محددة ومحللة",
+        etape2_check_3: "صفحة مقصودة مع قائمة انتظار نشطة", etape2_check_4: "تم جمع 50+ بريد إلكتروني",
+        etape2_check_5: "استلام أولى المدفوعات", etape2_check_6: "اختبار السعر والتحقق منه",
+        etape3_badge: "الخطوة 3", etape3_title: "بناء المنتج الأولي",
+        etape3_sub: "المنتج الأدنى القابل للتطبيق هو أبسط نسخة تحل المشكلة الأساسية. ابن في 4-8 أسابيع كحد أقصى.",
+        etape3_stack_title: "التقنيات الموصى بها", etape3_timeline_title: "الجدول الزمني للبناء",
+        etape3_tl_1_title: "الهندسة والإعداد", etape3_tl_1_sub: "Repo, CI/CD, مخطط قاعدة البيانات, تدفق المصادقة, نظام التصميم",
+        etape3_tl_2_title: "الميزات الأساسية", etape3_tl_2_sub: "الوظيفة الرئيسية, تجربة المستخدم, لوحة التحكم, CRUD",
+        etape3_tl_3_title: "الدفع والفواتير", etape3_tl_3_sub: "دمج Stripe, الخطط, webhooks, الفواتير",
+        etape3_tl_4_title: "الإطلاق", etape3_tl_4_sub: "اختبار, إصلاح الأخطاء, صفحة مقصودة, Product Hunt, تسويق",
+        etape4_badge: "الخطوة 4", etape4_title: "الربح والتسعير",
+        etape4_card1_title: "نماذج الإيرادات", etape4_card2_title: "مثال تسعير",
+        etape4_simulator_title: "محاكي إيرادات MRR", etape4_simulator_sub: "احسب إيرادك الشهري المتكرر المحتمل",
+        etape4_users_label: "المستخدمون المدفوعون", etape4_price_label: "متوسط السعر / الشهر ($)", etape4_mrr_label: "MRR المقدر",
+        etape5_badge: "الخطوة 5", etape5_title: "الاكتساب والنمو",
+        etape5_card1_title: "قنوات الاكتساب", etape5_card2_title: "مقاييس SaaS الرئيسية",
+        etape5_bip_title: "البناء علناً — سلاحك السري", etape5_bip_text: "البناء علناً يعني مشاركة عملية إنشائك بشكل مفتوح.",
+        revenus_title: "أهداف الإيرادات", revenus_sub: "خارطة طريق واقعية من $0 إلى $10,000 MRR كرائد أعمال فردي.",
+        faq_title: "الأسئلة المتكررة", faq_sub: "الأسئلة الأكثر شيوعاً من مؤسسي SaaS الطموحين.",
+        faq_1_q: "هل يجب أن تكون مطوراً لإطلاق SaaS؟", faq_1_a: "لا، لكنه يساعد كثيراً. كمطور، يمكنك البناء بنفسك.",
+        faq_2_q: "كم تكلفة إطلاق SaaS؟", faq_2_a: "مع التقنيات الحديثة: $0-50/شهر. Vercel (مجاني), Supabase (مجاني), Stripe (بدون رسوم ثابتة), نطاق ($12/سنة).",
+        faq_3_q: "كم من الوقت حتى أربح المال؟", faq_3_a: "إذا تحققت قبل البناء، يمكنك الحصول على أولى المدفوعات في 2-3 أشهر. المنتج الأولي يستغرق 4-8 أسابيع.",
+        faq_4_q: "أليس سوق SaaS مشبعاً؟", faq_4_a: "السوق كبير وينمو. هناك مجال لـ SaaS متخصص مع تجربة مستخدم فائقة أو تمركز فريد.",
+        faq_5_q: "كيف أدير SaaS مع عملي اليومي؟", faq_5_a: "خصص ساعتين/يوم أو 10 ساعات/أسبوع. أتمتة قدر الإمكان. عطلات نهاية الأسبوع للإطلاق.",
+        cta_title_1: "مستعد لإطلاق", cta_title_2: "منتج SaaS", cta_title_3: "؟",
+        cta_sub: "أفضل وقت للبدء هو الآن. اطلع على مدونتي لمزيد من الأدلة التقنية.",
+        cta_btn1: "📝 اقرأ مدونتي التقنية", cta_btn2: "🚀 عرض مشاريعي SaaS",
+        footer_desc: "دليل شامل للمطورين الذين يريدون إطلاق منتج SaaS الخاص بهم عبر الإنترنت.",
+        footer_ressources: "الموارد", footer_blog: "المدونة التقنية", footer_portfolio: "محفظة SaaS", footer_guide: "الدليل الكامل", footer_outils: "الأدوات الموصى بها",
+        footer_made: "صنع بواسطة",
+    }
+};
+
+let currentLang = 'fr';
+let isDark = true;
+
+function setLang(lang) {
+    currentLang = lang;
+    const t = translations[lang];
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (t[key] !== undefined) {
+            if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                el.placeholder = t[key];
+            } else {
+                el.innerHTML = t[key];
+            }
+        }
+    });
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+    });
+    document.documentElement.lang = lang === 'ar' ? 'ar' : lang === 'sp' ? 'es' : lang;
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+}
+
+function toggleTheme() {
+    isDark = !isDark;
+    document.body.classList.toggle('body-light', !isDark);
+    document.querySelector('.theme-toggle').textContent = isDark ? '☀️' : '🌙';
+}
+</script>
+
+<!-- Navigation -->
+<nav class="fixed top-0 left-0 right-0 z-50 nav-blur border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+            <a href="https://ucfzem.github.io/saas-guide" class="flex items-center space-x-2">
+                <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-gold-600 to-yellow-500 flex items-center justify-center">
+                    <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                    </svg>
+                </div>
+                <span class="font-bold text-lg">SaaS<span class="gradient-text">Guide</span></span>
+            </a>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#guide" class="text-sm text-gray-400 hover:text-gold-300 transition-colors" data-i18n="nav_guide">Guide</a>
+                <a href="#etapes" class="text-sm text-gray-400 hover:text-gold-300 transition-colors" data-i18n="nav_etapes">Étapes</a>
+                <a href="#stack" class="text-sm text-gray-400 hover:text-gold-300 transition-colors" data-i18n="nav_stack">Stack Tech</a>
+                <a href="#revenus" class="text-sm text-gray-400 hover:text-gold-300 transition-colors" data-i18n="nav_revenus">Revenus</a>
+                <a href="#faq" class="text-sm text-gray-400 hover:text-gold-300 transition-colors" data-i18n="nav_faq">FAQ</a>
+            </div>
+            <div class="flex items-center space-x-3">
+                <button onclick="toggleTheme()" class="theme-toggle" title="Toggle theme">☀️</button>
+                <div class="flex items-center space-x-1 border-r border-white/10 pr-3">
+                    <button data-lang="fr" onclick="setLang('fr')" class="lang-btn active">🇫🇷 FR</button>
+                    <button data-lang="en" onclick="setLang('en')" class="lang-btn">🇬🇧 EN</button>
+                    <button data-lang="sp" onclick="setLang('sp')" class="lang-btn">🇪🇸 ES</button>
+                    <button data-lang="ar" onclick="setLang('ar')" class="lang-btn">🇲🇦 AR</button>
+                </div>
+                <a href="https://ucfzem.github.io/ucfzem-blog/" target="_blank" class="hidden sm:inline-flex items-center px-3 py-1.5 text-sm font-medium text-gold-300 border border-gold-600/30 rounded-lg hover:bg-gold-600/10 transition-all" data-i18n="nav_blog">📝 Mon Blog</a>
+                <a href="https://ucfzem.github.io/works" target="_blank" class="inline-flex items-center px-3 py-1.5 text-sm font-medium text-white cta-gradient rounded-lg hover:shadow-lg hover:shadow-gold-600/25 transition-all" data-i18n="nav_saas">🚀 Mes SaaS</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section class="relative min-h-screen flex items-center justify-center hero-gradient pt-16 overflow-hidden">
+    <div class="blob bg-gold-600 w-96 h-96 top-20 -left-48 absolute"></div>
+    <div class="blob bg-yellow-600 w-80 h-80 top-40 right-0 absolute" style="animation-delay: -5s;"></div>
+    <div class="blob bg-brown-700 w-64 h-64 bottom-20 left-1/3 absolute" style="animation-delay: -10s;"></div>
+    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="slide-in">
+            <div class="inline-flex items-center px-4 py-2 rounded-full border border-gold-600/30 bg-gold-600/10 mb-8">
+                <span class="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
+                <span class="text-sm text-gold-300" data-i18n="hero_badge">Guide complet mis à jour pour 2025</span>
+            </div>
+        </div>
+        <h1 class="text-4xl sm:text-5xl md:text-7xl font-black mb-6 leading-tight slide-in" style="transition-delay:0.1s">
+            <span data-i18n="hero_title_1">Comment Débuter un</span><br>
+            <span class="gradient-text"><span data-i18n="hero_title_2">Business SaaS</span></span>
+            <span data-i18n="hero_title_3">en Ligne</span>
+        </h1>
+        <p class="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto mb-10 leading-relaxed slide-in" style="transition-delay:0.2s" data-i18n="hero_sub">De l'idée à vos premiers utilisateurs payants. Le guide technique et stratégique pour lancer votre propre produit SaaS — même avec 0 budget.</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 slide-in" style="transition-delay:0.3s">
+            <a href="#guide" class="inline-flex items-center px-8 py-4 text-lg font-semibold text-white cta-gradient rounded-xl hover:shadow-xl hover:shadow-gold-600/30 transition-all pulse-glow">
+                <span data-i18n="hero_cta">Commencer le Guide</span>
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+            </a>
+            <a href="https://ucfzem.github.io/works" target="_blank" class="inline-flex items-center px-8 py-4 text-lg font-medium text-gray-300 border border-white/10 rounded-xl hover:bg-white/5 hover:border-white/20 transition-all" data-i18n="hero_cta2">Voir mes projets SaaS →</a>
+        </div>
+        <!-- Stats -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto slide-in" style="transition-delay:0.4s">
+            <a href="https://www.statista.com/outlook/tmo/public-cloud/saas/worldwide" target="_blank" class="glass-card rounded-2xl p-4 block hover-lift">
+                <div class="text-2xl font-bold gradient-text">278B$</div>
+                <div class="text-xs text-gray-500 mt-1" data-i18n="stat_1_label">Marché SaaS 2025</div>
+            </a>
+            <a href="https://www.g2.com/categories/saas" target="_blank" class="glass-card rounded-2xl p-4 block hover-lift">
+                <div class="text-2xl font-bold gradient-text-gold">15 000+</div>
+                <div class="text-xs text-gray-500 mt-1" data-i18n="stat_2_label">SaaS existants</div>
+            </a>
+            <a href="https://saastr.com/saas-metrics-2/" target="_blank" class="glass-card rounded-2xl p-4 block hover-lift">
+                <div class="text-2xl font-bold text-green-400">82%</div>
+                <div class="text-xs text-gray-500 mt-1" data-i18n="stat_3_label">Marge brute moy.</div>
+            </a>
+            <a href="#guide" class="glass-card rounded-2xl p-4 block hover-lift">
+                <div class="text-2xl font-bold text-yellow-400">3-6 mois</div>
+                <div class="text-xs text-gray-500 mt-1" data-i18n="stat_4_label">Pour se lancer</div>
+            </a>
+        </div>
+    </div>
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+    </div>
+</section>
+
+<!-- Table of Contents -->
+<section id="guide" class="py-20 bg-dark-900">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="slide-in">
+            <div class="glow-line mb-12"></div>
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4" data-i18n="toc_title">📋 Sommaire du Guide</h2>
+            <p class="text-gray-400 mb-10" data-i18n="toc_sub">Un parcours complet en 10 étapes pour passer de l'idée au premier revenu récurrent.</p>
+        </div>
+        <div class="grid gap-4 slide-in">
+            <a href="#etape1" class="glass-card rounded-xl p-4 flex items-center space-x-4 hover-lift group">
+                <span class="step-number w-10 h-10 rounded-lg flex items-center justify-center text-sm font-bold shrink-0">1</span>
+                <div class="flex-1">
+                    <h3 class="font-semibold group-hover:text-gold-300 transition-colors" data-i18n="toc_1">Trouver votre idée SaaS</h3>
+                    <p class="text-sm text-gray-500" data-i18n="toc_1_sub">Identifier un problème réel et viable</p>
+                </div>
+                <svg class="w-5 h-5 text-gray-600 group-hover:text-gold-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#etape2" class="glass-card rounded-xl p-4 flex items-center space-x-4 hover-lift group">
+                <span class="step-number w-10 h-10 rounded-lg flex items-center justify-center text-sm font-bold shrink-0" style="background:linear-gradient(135deg,#d97706,#f59e0b)">2</span>
+                <div class="flex-1">
+                    <h3 class="font-semibold group-hover:text-yellow-300 transition-colors" data-i18n="toc_2">Valider le marché</h3>
+                    <p class="text-sm text-gray-500" data-i18n="toc_2_sub">Recherche, interviews, preuve de concept</p>
+                </div>
+                <svg class="w-5 h-5 text-gray-600 group-hover:text-yellow-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#etape3" class="glass-card rounded-xl p-4 flex items-center space-x-4 hover-lift group">
+                <span class="step-number w-10 h-10 rounded-lg flex items-center justify-center text-sm font-bold shrink-0" style="background:linear-gradient(135deg,#ea580c,#fb923c)">3</span>
+                <div class="flex-1">
+                    <h3 class="font-semibold group-hover:text-orange-300 transition-colors" data-i18n="toc_3">Construire le MVP</h3>
+                    <p class="text-sm text-gray-500" data-i18n="toc_3_sub">Choisir la stack tech, développer l'essentiel</p>
+                </div>
+                <svg class="w-5 h-5 text-gray-600 group-hover:text-orange-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#etape4" class="glass-card rounded-xl p-4 flex items-center space-x-4 hover-lift group">
+                <span class="step-number w-10 h-10 rounded-lg flex items-center justify-center text-sm font-bold shrink-0" style="background:linear-gradient(135deg,#059669,#34d399)">4</span>
+                <div class="flex-1">
+                    <h3 class="font-semibold group-hover:text-green-300 transition-colors" data-i18n="toc_4">Monétiser & Pricing</h3>
+                    <p class="text-sm text-gray-500" data-i18n="toc_4_sub">Modèles de revenus, stratégie de tarification</p>
+                </div>
+                <svg class="w-5 h-5 text-gray-600 group-hover:text-green-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#etape5" class="glass-card rounded-xl p-4 flex items-center space-x-4 hover-lift group">
+                <span class="step-number w-10 h-10 rounded-lg flex items-center justify-center text-sm font-bold shrink-0" style="background:linear-gradient(135deg,#d97706,#fbbf24)">5</span>
+                <div class="flex-1">
+                    <h3 class="font-semibold group-hover:text-yellow-300 transition-colors" data-i18n="toc_5">Acquisition & Growth</h3>
+                    <p class="text-sm text-gray-500" data-i18n="toc_5_sub">Marketing, SEO, content, social proof</p>
+                </div>
+                <svg class="w-5 h-5 text-gray-600 group-hover:text-yellow-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Step 1 -->
+<section id="etape1" class="py-20 bg-dark-800">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="slide-in">
+            <div class="flex items-center space-x-3 mb-6">
+                <span class="step-number w-12 h-12 rounded-xl flex items-center justify-center text-lg font-bold">1</span>
+                <div>
+                    <span class="text-gold-400 text-sm font-medium" data-i18n="etape1_badge">ÉTAPE 1</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold" data-i18n="etape1_title">Trouver Votre Idée SaaS</h2>
+                </div>
+            </div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8 mt-12">
+            <div class="slide-in space-y-6">
+                <div class="glass-card rounded-2xl p-6">
+                    <h3 class="text-xl font-semibold mb-3 flex items-center"><span class="text-2xl mr-2">🎯</span> <span data-i18n="etape1_card1_title">Résoudre un problème réel</span></h3>
+                    <p class="text-gray-400 leading-relaxed text-sm" data-i18n="etape1_card1_text">Les meilleurs SaaS résolvent un problème douloureux que les gens paieraient volontiers pour éliminer.</p>
+                    <div class="mt-4 p-4 bg-gold-600/10 rounded-lg border border-gold-600/20">
+                        <p class="text-sm text-gold-300"><strong>💡 <span data-i18n="etape1_card1_tip">Listez 10 frustrations récurrentes dans votre travail. Chacune pourrait être un SaaS.</span></strong></p>
+                    </div>
+                </div>
+                <div class="glass-card rounded-2xl p-6">
+                    <h3 class="text-xl font-semibold mb-3 flex items-center"><span class="text-2xl mr-2">🔍</span> <span data-i18n="etape1_card2_title">Analyser la concurrence</span></h3>
+                    <p class="text-gray-400 leading-relaxed text-sm" data-i18n="etape1_card2_text">Si un outil concurrent existe, c'est bon signe — il y a un marché payant.</p>
+                </div>
+            </div>
+            <div class="slide-in space-y-6" style="transition-delay:0.2s">
+                <div class="code-block rounded-2xl p-6">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                        <span class="text-gray-500 text-xs ml-2">idea-validator.js</span>
+                    </div>
+                    <pre class="text-xs sm:text-sm text-gray-300 leading-relaxed overflow-x-auto"><code>const validateIdea = (idea) => {
+  const criteria = {
+    painLevel: idea.painScore >= 7,
+    marketSize: idea.tam > 1_000_000,
+    willingness: idea.wtp >= 20,
+    competitors: idea.competitors.length > 0,
+    buildable: idea.canMVP === true
+  };
+  const score = Object.values(criteria).filter(Boolean).length;
+  return { viable: score >= 4, confidence: score / 5 };
+};</code></pre>
+                </div>
+                <div class="glass-card rounded-2xl p-6">
+                    <h3 class="text-lg font-semibold mb-4" data-i18n="etape1_card3_title">💡 Sources d'inspiration</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <a href="https://www.producthunt.com/" target="_blank" class="tag px-3 py-1 rounded-full text-xs">Product Hunt</a>
+                        <a href="https://www.reddit.com/r/SaaS/" target="_blank" class="tag px-3 py-1 rounded-full text-xs">Reddit</a>
+                        <a href="https://www.indiehackers.com/" target="_blank" class="tag px-3 py-1 rounded-full text-xs">Indie Hackers</a>
+                        <a href="https://twitter.com/" target="_blank" class="tag px-3 py-1 rounded-full text-xs">Twitter/X</a>
+                        <a href="https://news.ycombinator.com/" target="_blank" class="tag px-3 py-1 rounded-full text-xs">Hacker News</a>
+                        <span class="tag px-3 py-1 rounded-full text-xs">Review Mining</span>
+                        <span class="tag px-3 py-1 rounded-full text-xs">Your Own Pain</span>
+                        <a href="https://appsumo.com/" target="_blank" class="tag px-3 py-1 rounded-full text-xs">AppSumo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Step 2 -->
+<section id="etape2" class="py-20 bg-dark-900">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="slide-in">
+            <div class="flex items-center space-x-3 mb-6">
+                <span class="w-12 h-12 rounded-xl flex items-center justify-center text-lg font-bold shrink-0" style="background:linear-gradient(135deg,#d97706,#f59e0b)">2</span>
+                <div>
+                    <span class="text-yellow-400 text-sm font-medium" data-i18n="etape2_badge">ÉTAPE 2</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold" data-i18n="etape2_title">Valider le Marché</h2>
+                </div>
+            </div>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6 mt-12">
+            <div class="slide-in glass-card rounded-2xl p-6 hover-lift">
+                <div class="w-14 h-14 rounded-2xl bg-gold-600/20 flex items-center justify-center mb-4">
+                    <svg class="w-7 h-7 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+                </div>
+                <h3 class="text-lg font-semibold mb-2" data-i18n="etape2_card1_title">Interviews Utilisateurs</h3>
+                <p class="text-sm text-gray-400 mb-4" data-i18n="etape2_card1_text">Parlez à au moins 20 personnes cibles. Ne vendez pas — écoutez.</p>
+                <div class="text-xs text-gold-400 font-medium" data-i18n="etape2_card1_tag">→ 15-30 min / entretien</div>
+            </div>
+            <div class="slide-in glass-card rounded-2xl p-6 hover-lift" style="transition-delay:0.15s">
+                <div class="w-14 h-14 rounded-2xl bg-gold-600/20 flex items-center justify-center mb-4">
+                    <svg class="w-7 h-7 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                </div>
+                <h3 class="text-lg font-semibold mb-2" data-i18n="etape2_card2_title">Landing Page Test</h3>
+                <p class="text-sm text-gray-400 mb-4" data-i18n="etape2_card2_text">Créez une page de vente avant même de coder.</p>
+                <div class="text-xs text-gold-400 font-medium" data-i18n="etape2_card2_tag">→ Outils: Carrd, Framer</div>
+            </div>
+            <div class="slide-in glass-card rounded-2xl p-6 hover-lift" style="transition-delay:0.3s">
+                <div class="w-14 h-14 rounded-2xl bg-gold-600/20 flex items-center justify-center mb-4">
+                    <svg class="w-7 h-7 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg>
+                </div>
+                <h3 class="text-lg font-semibold mb-2" data-i18n="etape2_card3_title">Pré-vente / Waitlist</h3>
+                <p class="text-sm text-gray-400 mb-4" data-i18n="etape2_card3_text">Si 10+ personnes paient d'avance ou rejoignent votre waitlist, vous avez une validation solide.</p>
+                <div class="text-xs text-gold-400 font-medium" data-i18n="etape2_card3_tag">→ Cible: 50+ inscrits</div>
+            </div>
+        </div>
+        <div class="slide-in mt-12 glass-card rounded-2xl p-8" style="transition-delay:0.2s">
+            <h3 class="text-xl font-semibold mb-6" data-i18n="etape2_checklist_title">✅ Checklist de Validation</h3>
+            <div class="grid md:grid-cols-2 gap-4" id="validation-checklist">
+                <label class="flex items-center space-x-3 cursor-pointer group">
+                    <input type="checkbox" class="chk w-5 h-5 rounded border-gray-600 text-gold-600 focus:ring-gold-500 bg-transparent">
+                    <span class="text-sm text-gray-300 group-hover:text-white transition-colors" data-i18n="etape2_check_1">Problem interviewé 20+ personnes</span>
+                </label>
+                <label class="flex items-center space-x-3 cursor-pointer group">
+                    <input type="checkbox" class="chk w-5 h-5 rounded border-gray-600 text-gold-600 focus:ring-gold-500 bg-transparent">
+                    <span class="text-sm text-gray-300 group-hover:text-white transition-colors" data-i18n="etape2_check_2">Compétition identifiée et analysée</span>
+                </label>
+                <label class="flex items-center space-x-3 cursor-pointer group">
+                    <input type="checkbox" class="chk w-5 h-5 rounded border-gray-600 text-gold-600 focus:ring-gold-500 bg-transparent">
+                    <span class="text-sm text-gray-300 group-hover:text-white transition-colors" data-i18n="etape2_check_3">Landing page avec waitlist live</span>
+                </label>
+                <label class="flex items-center space-x-3 cursor-pointer group">
+                    <input type="checkbox" class="chk w-5 h-5 rounded border-gray-600 text-gold-600 focus:ring-gold-500 bg-transparent">
+                    <span class="text-sm text-gray-300 group-hover:text-white transition-colors" data-i18n="etape2_check_4">50+ emails collectés</span>
+                </label>
+                <label class="flex items-center space-x-3 cursor-pointer group">
+                    <input type="checkbox" class="chk w-5 h-5 rounded border-gray-600 text-gold-600 focus:ring-gold-500 bg-transparent">
+                    <span class="text-sm text-gray-300 group-hover:text-white transition-colors" data-i18n="etape2_check_5">Premiers paiements reçus</span>
+                </label>
+                <label class="flex items-center space-x-3 cursor-pointer group">
+                    <input type="checkbox" class="chk w-5 h-5 rounded border-gray-600 text-gold-600 focus:ring-gold-500 bg-transparent">
+                    <span class="text-sm text-gray-300 group-hover:text-white transition-colors" data-i18n="etape2_check_6">Prix testé et validé</span>
+                </label>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Step 3 -->
+<section id="etape3" class="py-20 bg-dark-800">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="slide-in">
+            <div class="flex items-center space-x-3 mb-6">
+                <span class="w-12 h-12 rounded-xl flex items-center justify-center text-lg font-bold shrink-0" style="background:linear-gradient(135deg,#ea580c,#fb923c)">3</span>
+                <div>
+                    <span class="text-orange-400 text-sm font-medium" data-i18n="etape3_badge">ÉTAPE 3</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold" data-i18n="etape3_title">Construire le MVP</h2>
+                </div>
+            </div>
+            <p class="text-gray-400 text-lg max-w-3xl" data-i18n="etape3_sub">Le Minimum Viable Product est la version la plus simple de votre produit qui résout le problème principal. Construisez en 4-8 semaines maximum.</p>
+        </div>
+        <div id="stack" class="mt-12 slide-in">
+            <h3 class="text-2xl font-bold mb-8" data-i18n="etape3_stack_title">🛠️ Stack Technique Recommandée</h3>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="saas-card rounded-2xl p-6">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-blue-500/20 flex items-center justify-center"><svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>
+                        <h4 class="font-semibold">Frontend</h4>
+                    </div>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li class="flex items-center"><span class="text-green-400 mr-2">✓</span> <a href="https://nextjs.org/" target="_blank" class="hover:text-gold-300">Next.js / React</a></li>
+                        <li class="flex items-center"><span class="text-green-400 mr-2">✓</span> <a href="https://tailwindcss.com/" target="_blank" class="hover:text-gold-300">Tailwind CSS</a></li>
+                        <li class="flex items-center"><span class="text-green-400 mr-2">✓</span> <a href="https://ui.shadcn.com/" target="_blank" class="hover:text-gold-300">Shadcn/ui</a></li>
+                        <li class="flex items-center"><span class="text-green-400 mr-2">✓</span> <a href="https://www.typescriptlang.org/" target="_blank" class="hover:text-gold-300">TypeScript</a></li>
+                    </ul>
+                </div>
+                <div class="saas-card rounded-2xl p-6">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-green-500/20 flex items-center justify-center"><svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"/></svg></div>
+                        <h4 class="font-semibold">Backend</h4>
+                    </div>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li class="flex items-center"><span class="text-green-400 mr-2">✓</span> <a href="https://supabase.com/" target="_blank" class="hover:text-gold-300">Supabase / Firebase</a></li>
+                        <li class="flex items-center"><span class="text-green-400 mr-2">✓</span> <a href="https://nodejs.org/" target="_blank" class="hover:text-gold-300">Node.js / Express</a></li>
+                        <li class="flex items-center"><span class="text-green-400 mr-2">✓</span> <a href="https://workers.cloudflare.com/" target="_blank" class="hover:text-gold-300">Cloudflare Workers</a></li>
+                        <li class="flex items-center"><span class="text-green-400 mr-2">✓</span> <a href="https://www.postgresql.org/" target="_blank" class="hover:text-gold-300">PostgreSQL</a></li>
+                    </ul>
+                </div>
+                <div class="saas-card rounded-2xl p-6">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-yellow-500/20 flex items-center justify-center"><svg class="w-5 h-5 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg></div>
+                        <h4 class="font-semibold">Paiements</h4>
+                    </div>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li class="flex items-center"><span class="text-green-400 mr-2">✓</span> <a href="https://stripe.com/" target="_blank" class="hover:text-gold-300">Stripe</a></li>
+                        <li class="flex items-center"><span class="text-green-400 mr-2">✓</span> <a href="https://www.lemonsqueezy.com/" target="_blank" class="hover:text-gold-300">Lemon Squeezy</a></li>
+                        <li class="flex items-center"><span class="text-green-400 mr-2">✓</span> <a href="https://www.paddle.com/" target="_blank" class="hover:text-gold-300">Paddle (MoR)</a></li>
+                        <li class="flex items-center"><span class="text-green-400 mr-2">✓</span> <a href="https://gumroad.com/" target="_blank" class="hover:text-gold-300">Gumroad</a></li>
+                    </ul>
+                </div>
+                <div class="saas-card rounded-2xl p-6">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-red-500/20 flex items-center justify-center"><svg class="w-5 h-5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg></div>
+                        <h4 class="font-semibold">Authentification</h4>
+                    </div>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li class="flex items-center"><span class="text-green-400 mr-2">✓</span> <a href="https://clerk.com/" target="_blank" class="hover:text-gold-300">Clerk / Auth.js</a></li>
+                        <li class="flex items-center"><span class="text-green-400 mr-2">✓</span> <a href="https://supabase.com/auth" target="_blank" class="hover:text-gold-300">Supabase Auth</a></li>
+                        <li class="flex items-center"><span class="text-green-400 mr-2">✓</span> Magic Links</li>
+                        <li class="flex items-center"><span class="text-green-400 mr-2">✓</span> OAuth (Google/GitHub)</li>
+                    </ul>
+                </div>
+                <div class="saas-card rounded-2xl p-6">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-orange-500/20 flex items-center justify-center"><svg class="w-5 h-5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3"/></svg></div>
+                        <h4 class="font-semibold">Déploiement</h4>
+                    </div>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li class="flex items-center"><span class="text-green-400 mr-2">✓</span> <a href="https://vercel.com/" target="_blank" class="hover:text-gold-300">Vercel</a></li>
+                        <li class="flex items-center"><span class="text-green-400 mr-2">✓</span> <a href="https://railway.app/" target="_blank" class="hover:text-gold-300">Railway / Render</a></li>
+                        <li class="flex items-center"><span class="text-green-400 mr-2">✓</span> <a href="https://pages.cloudflare.com/" target="_blank" class="hover:text-gold-300">Cloudflare Pages</a></li>
+                        <li class="flex items-center"><span class="text-green-400 mr-2">✓</span> <a href="https://fly.io/" target="_blank" class="hover:text-gold-300">Fly.io</a></li>
+                    </ul>
+                </div>
+                <div class="saas-card rounded-2xl p-6">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-cyan-500/20 flex items-center justify-center"><svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg></div>
+                        <h4 class="font-semibold">Analytics</h4>
+                    </div>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li class="flex items-center"><span class="text-green-400 mr-2">✓</span> <a href="https://plausible.io/" target="_blank" class="hover:text-gold-300">Plausible (privacy)</a></li>
+                        <li class="flex items-center"><span class="text-green-400 mr-2">✓</span> <a href="https://posthog.com/" target="_blank" class="hover:text-gold-300">PostHog (product)</a></li>
+                        <li class="flex items-center"><span class="text-green-400 mr-2">✓</span> Google Analytics</li>
+                        <li class="flex items-center"><span class="text-green-400 mr-2">✓</span> <a href="https://sentry.io/" target="_blank" class="hover:text-gold-300">Sentry (errors)</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- MVP Timeline -->
+        <div class="slide-in mt-16">
+            <h3 class="text-2xl font-bold mb-8" data-i18n="etape3_timeline_title">⏱️ Timeline de Construction</h3>
+            <div class="relative">
+                <div class="absolute left-6 top-0 bottom-0 w-0.5 timeline-line"></div>
+                <div class="space-y-8 ml-16">
+                    <div class="relative">
+                        <div class="absolute -left-12 w-6 h-6 rounded-full bg-gold-600 border-4 border-dark-800 flex items-center justify-center"><div class="w-2 h-2 bg-white rounded-full"></div></div>
+                        <div class="glass-card rounded-xl p-5">
+                            <span class="text-xs text-gold-400 font-medium">Semaines 1-2</span>
+                            <h4 class="font-semibold mt-1" data-i18n="etape3_tl_1_title">Architecture & Setup</h4>
+                            <p class="text-sm text-gray-400 mt-1" data-i18n="etape3_tl_1_sub">Repo, CI/CD, database schema, auth flow, design system</p>
+                        </div>
+                    </div>
+                    <div class="relative" style="transition-delay:0.1s">
+                        <div class="absolute -left-12 w-6 h-6 rounded-full bg-yellow-600 border-4 border-dark-800 flex items-center justify-center"><div class="w-2 h-2 bg-white rounded-full"></div></div>
+                        <div class="glass-card rounded-xl p-5">
+                            <span class="text-xs text-yellow-400 font-medium">Semaines 3-4</span>
+                            <h4 class="font-semibold mt-1" data-i18n="etape3_tl_2_title">Core Features</h4>
+                            <p class="text-sm text-gray-400 mt-1" data-i18n="etape3_tl_2_sub">Fonctionnalité principale, UX, dashboard, CRUD</p>
+                        </div>
+                    </div>
+                    <div class="relative" style="transition-delay:0.2s">
+                        <div class="absolute -left-12 w-6 h-6 rounded-full bg-orange-600 border-4 border-dark-800 flex items-center justify-center"><div class="w-2 h-2 bg-white rounded-full"></div></div>
+                        <div class="glass-card rounded-xl p-5">
+                            <span class="text-xs text-orange-400 font-medium">Semaines 5-6</span>
+                            <h4 class="font-semibold mt-1" data-i18n="etape3_tl_3_title">Paiement & Billing</h4>
+                            <p class="text-sm text-gray-400 mt-1" data-i18n="etape3_tl_3_sub">Stripe integration, plans, webhooks, invoices</p>
+                        </div>
+                    </div>
+                    <div class="relative" style="transition-delay:0.3s">
+                        <div class="absolute -left-12 w-6 h-6 rounded-full bg-green-600 border-4 border-dark-800 flex items-center justify-center"><div class="w-2 h-2 bg-white rounded-full"></div></div>
+                        <div class="glass-card rounded-xl p-5">
+                            <span class="text-xs text-green-400 font-medium">Semaines 7-8</span>
+                            <h4 class="font-semibold mt-1" data-i18n="etape3_tl_4_title">🚀 Launch</h4>
+                            <p class="text-sm text-gray-400 mt-1" data-i18n="etape3_tl_4_sub">Testing, bug fixes, landing page, Product Hunt, marketing</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Step 4 -->
+<section id="etape4" class="py-20 bg-dark-900">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="slide-in">
+            <div class="flex items-center space-x-3 mb-6">
+                <span class="w-12 h-12 rounded-xl flex items-center justify-center text-lg font-bold shrink-0" style="background:linear-gradient(135deg,#059669,#34d399)">4</span>
+                <div>
+                    <span class="text-green-400 text-sm font-medium" data-i18n="etape4_badge">ÉTAPE 4</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold" data-i18n="etape4_title">Monétiser & Pricing</h2>
+                </div>
+            </div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-6 mt-12">
+            <div class="slide-in saas-card rounded-2xl p-6">
+                <h3 class="text-xl font-semibold mb-4 flex items-center"><span class="mr-3">📊</span> <span data-i18n="etape4_card1_title">Modèles de Revenus Courants</span></h3>
+                <div class="space-y-4">
+                    <div class="flex items-start space-x-3 p-3 rounded-lg bg-white/5"><span class="text-green-400 font-bold shrink-0">$</span><div><h4 class="font-medium text-sm">Freemium</h4><p class="text-xs text-gray-400">Gratuit de base, premium avec features avancées.</p></div></div>
+                    <div class="flex items-start space-x-3 p-3 rounded-lg bg-white/5"><span class="text-green-400 font-bold shrink-0">$$</span><div><h4 class="font-medium text-sm">Tiered Pricing</h4><p class="text-xs text-gray-400">3-4 plans (Basic, Pro, Enterprise).</p></div></div>
+                    <div class="flex items-start space-x-3 p-3 rounded-lg bg-white/5"><span class="text-green-400 font-bold shrink-0">$$$</span><div><h4 class="font-medium text-sm">Usage-Based</h4><p class="text-xs text-gray-400">Pay-per-use, crédits, API calls.</p></div></div>
+                    <div class="flex items-start space-x-3 p-3 rounded-lg bg-white/5"><span class="text-green-400 font-bold shrink-0">$$$$</span><div><h4 class="font-medium text-sm">Lifetime Deal</h4><p class="text-xs text-gray-400">Paiement unique. Stratégie de launch sur AppSumo.</p></div></div>
+                </div>
+            </div>
+            <div class="slide-in saas-card rounded-2xl p-6" style="transition-delay:0.15s">
+                <h3 class="text-xl font-semibold mb-6 flex items-center"><span class="mr-3">💰</span> <span data-i18n="etape4_card2_title">Exemple de Pricing</span></h3>
+                <div class="space-y-4">
+                    <div class="p-4 rounded-xl border border-white/10 hover:border-gold-500/50 transition-all">
+                        <div class="flex justify-between items-center mb-2"><span class="font-semibold text-sm">Starter</span><span class="text-2xl font-bold gradient-text">$9<span class="text-sm text-gray-500 font-normal">/mois</span></span></div>
+                        <p class="text-xs text-gray-500 mb-2">Perfect pour les freelances</p>
+                        <div class="w-full bg-dark-600 rounded-full h-1.5"><div class="metric-bar h-1.5 rounded-full" style="width:40%"></div></div>
+                        <p class="text-xs text-gray-500 mt-1">~40% des utilisateurs</p>
+                    </div>
+                    <div class="p-4 rounded-xl border-2 border-gold-600/50 bg-gold-600/5 relative">
+                        <span class="absolute -top-3 left-4 text-xs font-bold text-gold-400 bg-dark-800 px-2">POPULAIRE</span>
+                        <div class="flex justify-between items-center mb-2"><span class="font-semibold text-sm">Pro</span><span class="text-2xl font-bold gradient-text">$29<span class="text-sm text-gray-500 font-normal">/mois</span></span></div>
+                        <p class="text-xs text-gray-500 mb-2">Pour les équipes en croissance</p>
+                        <div class="w-full bg-dark-600 rounded-full h-1.5"><div class="metric-bar h-1.5 rounded-full" style="width:70%"></div></div>
+                        <p class="text-xs text-gray-500 mt-1">~45% des utilisateurs</p>
+                    </div>
+                    <div class="p-4 rounded-xl border border-white/10 hover:border-gold-500/50 transition-all">
+                        <div class="flex justify-between items-center mb-2"><span class="font-semibold text-sm">Enterprise</span><span class="text-2xl font-bold gradient-text">$99<span class="text-sm text-gray-500 font-normal">/mois</span></span></div>
+                        <p class="text-xs text-gray-500 mb-2">Fonctionnalités avancées + support</p>
+                        <div class="w-full bg-dark-600 rounded-full h-1.5"><div class="metric-bar h-1.5 rounded-full" style="width:20%"></div></div>
+                        <p class="text-xs text-gray-500 mt-1">~15% des utilisateurs</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- MRR Calculator -->
+        <div class="slide-in mt-12 glass-card rounded-2xl p-8" style="transition-delay:0.2s">
+            <h3 class="text-xl font-semibold mb-2" data-i18n="etape4_simulator_title">🧮 Simulateur de Revenus MRR</h3>
+            <p class="text-sm text-gray-400 mb-8" data-i18n="etape4_simulator_sub">Calculez votre Monthly Recurring Revenue potentiel</p>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <label class="block text-sm font-medium mb-2" data-i18n="etape4_users_label">Utilisateurs payants</label>
+                    <input type="range" id="users-range" min="0" max="1000" value="100" class="w-full accent-gold-600 h-2 bg-dark-600 rounded-lg appearance-none cursor-pointer">
+                    <div class="flex justify-between text-xs text-gray-500 mt-1"><span>0</span><span id="users-value" class="text-gold-400 font-bold text-lg">100</span><span>1000</span></div>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2" data-i18n="etape4_price_label">Prix moyen / mois ($)</label>
+                    <input type="range" id="price-range" min="5" max="200" value="29" class="w-full accent-gold-600 h-2 bg-dark-600 rounded-lg appearance-none cursor-pointer">
+                    <div class="flex justify-between text-xs text-gray-500 mt-1"><span>$5</span><span id="price-value" class="text-gold-400 font-bold text-lg">$29</span><span>$200</span></div>
+                </div>
+                <div class="flex flex-col justify-center">
+                    <p class="text-sm text-gray-500 mb-1" data-i18n="etape4_mrr_label">MRR Estimé</p>
+                    <p id="mrr-value" class="text-4xl font-black gradient-text">$2,900</p>
+                    <p id="arr-value" class="text-sm text-gray-500 mt-1">ARR: $34,800/an</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Step 5 -->
+<section id="etape5" class="py-20 bg-dark-800">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="slide-in">
+            <div class="flex items-center space-x-3 mb-6">
+                <span class="w-12 h-12 rounded-xl flex items-center justify-center text-lg font-bold shrink-0" style="background:linear-gradient(135deg,#d97706,#fbbf24)">5</span>
+                <div>
+                    <span class="text-yellow-400 text-sm font-medium" data-i18n="etape5_badge">ÉTAPE 5</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold" data-i18n="etape5_title">Acquisition & Growth Hacking</h2>
+                </div>
+            </div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-6 mt-12">
+            <div class="slide-in saas-card rounded-2xl p-6">
+                <h3 class="text-lg font-semibold mb-4" data-i18n="etape5_card1_title">🔑 Canaux d'Acquisition</h3>
+                <div class="space-y-3">
+                    <div class="flex items-center justify-between p-3 rounded-lg bg-white/5"><div class="flex items-center space-x-3"><span class="text-xl">✍️</span><span class="text-sm font-medium">Content Marketing & SEO</span></div><span class="text-xs text-green-400 font-medium">Long terme</span></div>
+                    <div class="flex items-center justify-between p-3 rounded-lg bg-white/5"><div class="flex items-center space-x-3"><span class="text-xl">🐦</span><span class="text-sm font-medium">Build in Public (Twitter/X)</span></div><span class="text-xs text-yellow-400 font-medium">Gratuit</span></div>
+                    <div class="flex items-center justify-between p-3 rounded-lg bg-white/5"><div class="flex items-center space-x-3"><span class="text-xl">🚀</span><span class="text-sm font-medium">Product Hunt Launch</span></div><span class="text-xs text-blue-400 font-medium">Impact fort</span></div>
+                    <div class="flex items-center justify-between p-3 rounded-lg bg-white/5"><div class="flex items-center space-x-3"><span class="text-xl">📧</span><span class="text-sm font-medium">Email Marketing</span></div><span class="text-xs text-green-400 font-medium">ROI élevé</span></div>
+                    <div class="flex items-center justify-between p-3 rounded-lg bg-white/5"><div class="flex items-center space-x-3"><span class="text-xl">🤝</span><span class="text-sm font-medium">Affiliés & Partenariats</span></div><span class="text-xs text-purple-400 font-medium">Scalable</span></div>
+                    <div class="flex items-center justify-between p-3 rounded-lg bg-white/5"><div class="flex items-center space-x-3"><span class="text-xl">💬</span><span class="text-sm font-medium">Communautés (Reddit, Discord)</span></div><span class="text-xs text-yellow-400 font-medium">Organic</span></div>
+                </div>
+            </div>
+            <div class="slide-in saas-card rounded-2xl p-6" style="transition-delay:0.15s">
+                <h3 class="text-lg font-semibold mb-4" data-i18n="etape5_card2_title">📈 Métriques Clés SaaS</h3>
+                <div class="space-y-5">
+                    <div><div class="flex justify-between text-sm mb-1"><span class="font-medium">Churn Rate</span><span class="text-green-400">&lt; 5%/mois ✓</span></div><div class="w-full bg-dark-600 rounded-full h-2"><div class="h-2 rounded-full bg-gradient-to-r from-green-500 to-green-400" style="width:15%"></div></div></div>
+                    <div><div class="flex justify-between text-sm mb-1"><span class="font-medium">MRR Growth</span><span class="text-gold-400">+15-20%/mois</span></div><div class="w-full bg-dark-600 rounded-full h-2"><div class="h-2 rounded-full bg-gradient-to-r from-gold-600 to-gold-400" style="width:20%"></div></div></div>
+                    <div><div class="flex justify-between text-sm mb-1"><span class="font-medium">LTV:CAC Ratio</span><span class="text-purple-400">&gt; 3:1 ✓</span></div><div class="w-full bg-dark-600 rounded-full h-2"><div class="h-2 rounded-full bg-gradient-to-r from-purple-600 to-purple-400" style="width:75%"></div></div></div>
+                    <div><div class="flex justify-between text-sm mb-1"><span class="font-medium">Activation Rate</span><span class="text-pink-400">&gt; 40%</span></div><div class="w-full bg-dark-600 rounded-full h-2"><div class="h-2 rounded-full bg-gradient-to-r from-pink-600 to-pink-400" style="width:40%"></div></div></div>
+                    <div><div class="flex justify-between text-sm mb-1"><span class="font-medium">NPS Score</span><span class="text-yellow-400">&gt; 50</span></div><div class="w-full bg-dark-600 rounded-full h-2"><div class="h-2 rounded-full bg-gradient-to-r from-yellow-600 to-yellow-400" style="width:50%"></div></div></div>
+                </div>
+            </div>
+        </div>
+        <div class="slide-in mt-12 glass-card rounded-2xl p-8 border border-yellow-600/20" style="transition-delay:0.3s">
+            <h3 class="text-xl font-semibold mb-4 flex items-center"><span class="text-2xl mr-3">🏗️</span> <span data-i18n="etape5_bip_title">Build in Public — Votre Arme Secrète</span></h3>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="space-y-4 text-sm text-gray-300">
+                    <p data-i18n="etape5_bip_text">Le 'Build in Public' consiste à partager ouvertement votre processus de création. C'est la stratégie la plus puissante pour un indie SaaS solo.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-start"><span class="text-yellow-400 mr-2">→</span> Partagez vos milestones sur Twitter/X</li>
+                        <li class="flex items-start"><span class="text-yellow-400 mr-2">→</span> Écrivez sur vos échecs et apprentissages</li>
+                        <li class="flex items-start"><span class="text-yellow-400 mr-2">→</span> Montrez vos revenus (transparence = crédibilité)</li>
+                        <li class="flex items-start"><span class="text-yellow-400 mr-2">→</span> Engagez la communauté indieweb</li>
+                    </ul>
+                </div>
+                <div class="code-block rounded-xl p-4 text-xs">
+                    <p class="text-gray-500 mb-2"># Exemple de tweet Build in Public :</p>
+                    <p class="text-white">🚀 Day 47 of building my SaaS:</p>
+                    <p class="text-white">✅ Launched payments via Stripe</p>
+                    <p class="text-white">💰 First paying customer: $29/mo!</p>
+                    <p class="text-white">📊 MRR: $29 (it's a start!)</p>
+                    <p class="text-white">🛣️ Next: Onboarding flow</p>
+                    <p class="text-blue-400 mt-2">#buildinpublic #SaaS #indiehacker</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Revenue Goals -->
+<section id="revenus" class="py-20 bg-dark-900">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="slide-in">
+            <div class="glow-line mb-12"></div>
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-center" data-i18n="revenus_title">📊 Objectifs de Revenus</h2>
+            <p class="text-gray-400 text-center max-w-2xl mx-auto mb-12" data-i18n="revenus_sub">Roadmap réaliste pour passer de $0 à $10,000 MRR en tant que solopreneur.</p>
+        </div>
+        <div class="grid md:grid-cols-4 gap-6">
+            <div class="slide-in glass-card rounded-2xl p-6 text-center hover-lift"><div class="w-16 h-16 rounded-full bg-dark-600 flex items-center justify-center mx-auto mb-4"><span class="text-2xl">🌱</span></div><div class="text-sm text-gray-500 mb-1">Mois 1-3</div><div class="text-2xl font-bold gradient-text">MRR $0-500</div><div class="text-xs text-gray-500 mt-3">Premiers beta utilisateurs, validation, pricing tests</div></div>
+            <div class="slide-in glass-card rounded-2xl p-6 text-center hover-lift" style="transition-delay:0.1s"><div class="w-16 h-16 rounded-full bg-dark-600 flex items-center justify-center mx-auto mb-4"><span class="text-2xl">🌿</span></div><div class="text-sm text-gray-500 mb-1">Mois 3-6</div><div class="text-2xl font-bold gradient-text">MRR $500-2K</div><div class="text-xs text-gray-500 mt-3">Product Hunt launch, content marketing, premiers affiliates</div></div>
+            <div class="slide-in glass-card rounded-2xl p-6 text-center hover-lift" style="transition-delay:0.2s"><div class="w-16 h-16 rounded-full bg-dark-600 flex items-center justify-center mx-auto mb-4"><span class="text-2xl">🌳</span></div><div class="text-sm text-gray-500 mb-1">Mois 6-12</div><div class="text-2xl font-bold gradient-text">MRR $2K-5K</div><div class="text-xs text-gray-500 mt-3">SEO en marche, referrals, partnerships, scaling</div></div>
+            <div class="slide-in glass-card rounded-2xl p-6 text-center hover-lift" style="transition-delay:0.3s"><div class="w-16 h-16 rounded-full bg-dark-600 flex items-center justify-center mx-auto mb-4"><span class="text-2xl">🏔️</span></div><div class="text-sm text-gray-500 mb-1">Mois 12+</div><div class="text-2xl font-bold gradient-text-gold">MRR $5K-10K+</div><div class="text-xs text-gray-500 mt-3">Full-time, équipe potentielle, multi-produits</div></div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="py-20 bg-dark-800">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="slide-in text-center mb-12">
+            <div class="glow-line mb-8"></div>
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4" data-i18n="faq_title">❓ Questions Fréquentes</h2>
+            <p class="text-gray-400" data-i18n="faq_sub">Les questions les plus posées par les futurs fondateurs SaaS.</p>
+        </div>
+        <div class="slide-in space-y-4">
+            <div class="glass-card rounded-xl overflow-hidden">
+                <button class="w-full text-left p-5 flex items-center justify-between" onclick="toggleFaq(this)">
+                    <span class="font-medium" data-i18n="faq_1_q">Faut-il être un développeur pour lancer un SaaS ?</span>
+                    <svg class="w-5 h-5 text-gray-400 transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div class="accordion-content px-5"><p class="text-sm text-gray-400 pb-5" data-i18n="faq_1_a">Non, mais ça aide énormément. En tant que développeur, vous pouvez construire vous-même — ce qui réduit vos coûts à quasi-zéro.</p></div>
+            </div>
+            <div class="glass-card rounded-xl overflow-hidden">
+                <button class="w-full text-left p-5 flex items-center justify-between" onclick="toggleFaq(this)">
+                    <span class="font-medium" data-i18n="faq_2_q">Combien ça coûte de lancer un SaaS ?</span>
+                    <svg class="w-5 h-5 text-gray-400 transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div class="accordion-content px-5"><p class="text-sm text-gray-400 pb-5" data-i18n="faq_2_a">Avec la stack moderne : $0-50/mois. Vercel (gratuit tier), Supabase (gratuit tier), Stripe (pas de frais fixes), domain ($12/an).</p></div>
+            </div>
+            <div class="glass-card rounded-xl overflow-hidden">
+                <button class="w-full text-left p-5 flex items-center justify-between" onclick="toggleFaq(this)">
+                    <span class="font-medium" data-i18n="faq_3_q">Combien de temps avant de gagner de l'argent ?</span>
+                    <svg class="w-5 h-5 text-gray-400 transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div class="accordion-content px-5"><p class="text-sm text-gray-400 pb-5" data-i18n="faq_3_a">Si vous validez avant de construire, vous pouvez avoir des premiers paiements en 2-3 mois. Le MVP prend 4-8 semaines.</p></div>
+            </div>
+            <div class="glass-card rounded-xl overflow-hidden">
+                <button class="w-full text-left p-5 flex items-center justify-between" onclick="toggleFaq(this)">
+                    <span class="font-medium" data-i18n="faq_4_q">Le marché SaaS n'est-il pas saturé ?</span>
+                    <svg class="w-5 h-5 text-gray-400 transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div class="accordion-content px-5"><p class="text-sm text-gray-400 pb-5" data-i18n="faq_4_a">Le marché est grand et en croissance. Il y a de la place pour des SaaS de niche, avec une UX supérieure, ou un positionnement unique.</p></div>
+            </div>
+            <div class="glass-card rounded-xl overflow-hidden">
+                <button class="w-full text-left p-5 flex items-center justify-between" onclick="toggleFaq(this)">
+                    <span class="font-medium" data-i18n="faq_5_q">Comment gérer un SaaS en parallèle de mon travail ?</span>
+                    <svg class="w-5 h-5 text-gray-400 transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div class="accordion-content px-5"><p class="text-sm text-gray-400 pb-5" data-i18n="faq_5_a">Bloquez 2h/jour ou 10h/semaine. Automatisez au maximum. Les week-ends sont pour les lancements.</p></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="py-20 bg-dark-900 relative overflow-hidden">
+    <div class="blob bg-gold-600 w-96 h-96 top-0 right-0 absolute opacity-10"></div>
+    <div class="blob bg-yellow-600 w-80 h-80 bottom-0 left-0 absolute opacity-10"></div>
+    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="slide-in">
+            <h2 class="text-3xl sm:text-5xl font-black mb-6">
+                <span data-i18n="cta_title_1">Prêt à Lancer Votre</span><br>
+                <span class="gradient-text"><span data-i18n="cta_title_2">SaaS</span></span>
+                <span data-i18n="cta_title_3">?</span>
+            </h2>
+            <p class="text-lg text-gray-400 max-w-2xl mx-auto mb-10" data-i18n="cta_sub">Le meilleur moment pour commencer, c'est maintenant. Consultez mon blog pour plus de guides.</p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="https://ucfzem.github.io/ucfzem-blog/" target="_blank" class="inline-flex items-center px-8 py-4 text-lg font-semibold text-white cta-gradient rounded-xl hover:shadow-xl hover:shadow-gold-600/30 transition-all">
+                    <span data-i18n="cta_btn1">📝 Lire mon Blog Technique</span>
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                </a>
+                <a href="https://ucfzem.github.io/works" target="_blank" class="inline-flex items-center px-8 py-4 text-lg font-semibold text-white border-2 border-white/20 rounded-xl hover:bg-white/10 hover:border-white/40 transition-all">
+                    <span data-i18n="cta_btn2">🚀 Voir Mes Projets SaaS</span>
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark-800 border-t border-white/5 py-12">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-3 gap-8 mb-8">
+            <div>
+                <div class="flex items-center space-x-2 mb-4">
+                    <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-gold-600 to-yellow-500 flex items-center justify-center">
+                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    </div>
+                    <span class="font-bold text-lg">SaaS<span class="gradient-text">Guide</span></span>
+                </div>
+                <p class="text-sm text-gray-500" data-i18n="footer_desc">Guide complet pour les développeurs qui veulent lancer leur propre produit SaaS en ligne.</p>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-4" data-i18n="footer_ressources">Ressources</h4>
+                <ul class="space-y-2 text-sm text-gray-500">
+                    <li><a href="https://ucfzem.github.io/ucfzem-blog/" target="_blank" class="hover:text-white transition-colors" data-i18n="footer_blog">Blog Technique</a></li>
+                    <li><a href="https://ucfzem.github.io/works" target="_blank" class="hover:text-white transition-colors" data-i18n="footer_portfolio">Portfolio SaaS</a></li>
+                    <li><a href="#guide" class="hover:text-white transition-colors" data-i18n="footer_guide">Guide Complet</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-4" data-i18n="footer_outils">Outils Recommandés</h4>
+                <ul class="space-y-2 text-sm text-gray-500">
+                    <li><a href="https://nextjs.org/" target="_blank" class="hover:text-white transition-colors">Next.js + Tailwind</a></li>
+                    <li><a href="https://supabase.com/" target="_blank" class="hover:text-white transition-colors">Supabase</a></li>
+                    <li><a href="https://stripe.com/" target="_blank" class="hover:text-white transition-colors">Stripe</a></li>
+                    <li><a href="https://vercel.com/" target="_blank" class="hover:text-white transition-colors">Vercel</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="glow-line mb-6"></div>
+        <div class="flex flex-col sm:flex-row items-center justify-between text-sm text-gray-600">
+            <p>© 2025 — Construit avec passion</p>
+            <p class="mt-2 sm:mt-0"><span data-i18n="footer_made">Made by</span> <a href="https://ucfzem.github.io/works" target="_blank" class="gradient-text hover:underline">ucfzem</a></p>
+        </div>
+    </div>
+</footer>
+
+<script>
+// Scroll animation observer
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+document.querySelectorAll('.slide-in').forEach(el => observer.observe(el));
+
+// FAQ Toggle
+function toggleFaq(button) {
+    const content = button.nextElementSibling;
+    const icon = button.querySelector('.faq-icon');
+    const isOpen = content.classList.contains('open');
+    document.querySelectorAll('.accordion-content').forEach(c => c.classList.remove('open'));
+    document.querySelectorAll('.faq-icon').forEach(i => i.style.transform = 'rotate(0deg)');
+    if (!isOpen) {
+        content.classList.add('open');
+        icon.style.transform = 'rotate(180deg)';
+    }
+}
+
+// Revenue Calculator
+const usersRange = document.getElementById('users-range');
+const priceRange = document.getElementById('price-range');
+const usersValue = document.getElementById('users-value');
+const priceValue = document.getElementById('price-value');
+const mrrValue = document.getElementById('mrr-value');
+const arrValue = document.getElementById('arr-value');
+function updateCalculator() {
+    const users = parseInt(usersRange.value);
+    const price = parseInt(priceRange.value);
+    const mrr = users * price;
+    const arr = mrr * 12;
+    usersValue.textContent = users.toLocaleString();
+    priceValue.textContent = '$' + price;
+    mrrValue.textContent = '$' + mrr.toLocaleString();
+    arrValue.textContent = 'ARR: $' + arr.toLocaleString() + '/an';
+}
+usersRange.addEventListener('input', updateCalculator);
+priceRange.addEventListener('input', updateCalculator);
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+});
+
+// Navbar transparency
+window.addEventListener('scroll', () => {
+    const nav = document.querySelector('nav');
+    nav.style.borderBottomColor = window.pageYOffset > 100 ? 'rgba(255,255,255,0.08)' : 'rgba(255,255,255,0.03)';
+});
+
+// Initialize lang on page load
+document.addEventListener('DOMContentLoaded', () => {
+    setLang('fr');
+    // Force language to set initial content
+    setTimeout(() => setLang('fr'), 10);
+});
+</script>
+</body>
+</html>
